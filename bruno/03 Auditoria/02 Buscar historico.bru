@@ -1,0 +1,20 @@
+meta {
+  name: Buscar historico
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/historico/{{historicoId}}
+  body: none
+  auth: none
+}
+
+tests {
+  test("Status HTTP 200", function () {
+    expect(res.getStatus()).to.equal(200);
+  });
+  test("ID da auditoria", function () {
+    expect(res.getBody().id).to.equal(bru.getVar("historicoId"));
+  });
+}

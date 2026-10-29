@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<body>
+<div id="mensagens-sistema" th:fragment="mensagens">
+    <div id="notificacoes" th:attr="data-url=@{/notificacoes},data-mensagem=${mensagem}" role="status" aria-live="polite" aria-relevant="additions"></div>
+    <noscript><div class="alert alert-success" th:if="${mensagem}" th:text="${mensagem}" role="status"></div></noscript>
+</div>
+</body>
+</html>

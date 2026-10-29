@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <springProperty scope="context" name="APP_NAME" source="spring.application.name"
+                    defaultValue="Treinamento CRUD Spring Boot"/>
+    <!-- O prefixo também identifica cada linha de mensagens multilinha e stack traces. -->
+    <property name="CONSOLE_LOG_PATTERN"
+              value="%replace(%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] [requestId=%X{requestId:-sem-requisicao}] %logger{36} : %msg%n%wEx){'(?m)^(?!$)', '[${APP_NAME}] '}"/>
+    <property name="FILE_LOG_PATTERN" value="${CONSOLE_LOG_PATTERN}"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+    <include resource="org/springframework/boot/logging/logback/file-appender.xml"/>
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </root>
+</configuration>

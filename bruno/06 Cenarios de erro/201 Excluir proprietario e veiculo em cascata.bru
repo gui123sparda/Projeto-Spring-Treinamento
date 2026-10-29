@@ -1,0 +1,17 @@
+meta {
+  name: NEG-201 Excluir proprietario e veiculo em cascata
+  type: http
+  seq: 201
+}
+
+delete {
+  url: {{baseUrl}}/api/proprietarios/{{erroProprietarioId}}
+  body: none
+  auth: none
+}
+
+tests {
+  test("NEG-201: HTTP 204", function () {
+    expect(res.getStatus()).to.equal(204);
+  });
+}

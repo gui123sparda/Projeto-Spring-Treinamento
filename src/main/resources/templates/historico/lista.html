@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Histórico de cadastros</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5/daisyui.css"><link rel="stylesheet" th:href="@{/css/app.css}"></head>
+<body><header th:replace="~{fragments/header :: header}"></header><main class="page-shell">
+<div class="page-header"><div><h1>Histórico de cadastros</h1><p>Cadastros, alterações e exclusões lógicas, com os dados anteriores e posteriores.</p></div><a class="btn" th:href="@{/}">Voltar ao início</a></div>
+<div th:replace="~{fragments/mensagens :: mensagens}"></div>
+<section class="card panel"><div class="card-body">
+<nav class="tabs tabs-border" aria-label="Tipo de histórico"><a class="tab" th:classappend="${!historicoVeiculos} ? 'tab-active'" th:href="@{/historico}">Proprietários</a><a class="tab" th:classappend="${historicoVeiculos} ? 'tab-active'" th:href="@{/historico-veiculos}">Veículos</a></nav>
+<form method="get" th:action="@{${caminhoHistorico}}"><div class="form-grid">
+<div class="field"><label for="busca">Nome, documento, placa ou conteúdo</label><input class="input" id="busca" name="busca" type="search" th:value="${filtros['busca']}"></div>
+<div class="field"><label for="registroId">ID do cadastro</label><input class="input" id="registroId" name="registroId" type="number" min="1" th:value="${filtros['registroId']}"></div>
+<div class="field"><label for="dataDe">Desde</label><input class="input" id="dataDe" name="dataDe" type="date" th:value="${filtros['dataDe']}"></div>
+<div class="field"><label for="dataAte">Até</label><input class="input" id="dataAte" name="dataAte" type="date" th:value="${filtros['dataAte']}"></div>
+<div class="field"><label for="operacao">Operação</label><select class="select" name="operacao" id="operacao"><option value="">Todas</option><option th:each="op : ${ {'LEGADO','MARCO_INICIAL','CADASTRO','ALTERACAO','EXCLUSAO_LOGICA'} }" th:value="${op}" th:text="${op}" th:selected="${filtros['operacao'] == op}"></option></select></div>
+</div><div class="form-actions"><button class="btn" type="submit">Consultar histórico</button><button class="btn" type="submit" th:formaction="@{${caminhoRelatorio}}">Exportar histórico em PDF</button><a class="btn" th:href="@{${caminhoHistorico}}">Limpar</a></div></form>
+<p class="field-hint">Datas no fuso de Fortaleza. O usuário registrado é a conta do banco.</p>
+<p th:text="|${pagina.totalElements} eventos · Página ${pagina.number + 1} de ${pagina.totalPages == 0 ? 1 : pagina.totalPages}|"></p>
+<div class="table-wrap"><table class="table table-zebra"><thead><tr><th>Data (Fortaleza)</th><th>Cadastro / ID</th><th>Operação</th><th>Dados preservados</th></tr></thead><tbody>
+<tr th:each="item : ${pagina.content}"><td th:text="${item['data']}"></td><td><a th:href="@{/historico/{id}(id=${item['id']})}" th:text="|${item['entidade']} / ${item['registroId']}|"></a></td><td th:text="${item['operacao']}"></td><td><details><summary>Comparar antes e depois</summary><strong>Antes</strong><pre class="historico-json" th:text="${item['antes']}"></pre><strong>Depois</strong><pre class="historico-json" th:text="${item['depois']}"></pre><small th:text="|Usuário do banco: ${item['usuario']}|"></small></details></td></tr>
+<tr th:if="${pagina.empty}"><td colspan="4">Nenhum evento encontrado para os filtros informados.</td></tr>
+</tbody></table></div>
+<nav class="pagination" aria-label="Páginas do histórico" th:if="${pagina.totalPages > 1}">
+<a class="btn" th:if="${!pagina.first}" th:href="@{${caminhoHistorico}(page=${pagina.number - 1},busca=${filtros['busca']},registroId=${filtros['registroId']},operacao=${filtros['operacao']},dataDe=${filtros['dataDe']},dataAte=${filtros['dataAte']})}">Anterior</a>
+<a class="btn" th:if="${!pagina.last}" th:href="@{${caminhoHistorico}(page=${pagina.number + 1},busca=${filtros['busca']},registroId=${filtros['registroId']},operacao=${filtros['operacao']},dataDe=${filtros['dataDe']},dataAte=${filtros['dataAte']})}">Próximo</a>
+</nav></div></section></main></body></html>

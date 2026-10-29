@@ -1,0 +1,23 @@
+meta {
+  name: Confirmar veiculo excluido
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/veiculos/{{veiculoId}}
+  body: none
+  auth: none
+}
+
+tests {
+  test("Status HTTP 404", function () {
+    expect(res.getStatus()).to.equal(404);
+  });
+  test("Erro no formato da API", function () {
+    const body = res.getBody();
+    expect(body.status).to.equal(res.getStatus());
+    expect(body.mensagem).to.be.a("string").and.not.empty;
+    expect(body.erros).to.be.an("array");
+  });
+}

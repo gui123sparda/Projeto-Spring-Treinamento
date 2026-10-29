@@ -1,0 +1,55 @@
+meta {
+  name: NEG-001 Preparar proprietario
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/proprietarios
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {"cpfCnpj": "{{erroCpf}}", "nome": "Teste Cenarios Erro", "cep": "60000000", "estado": "CE"}
+}
+
+script:pre-request {
+  // Novos dados a cada execução, inclusive após exclusão lógica.
+  const digits = Array.from({ length: 9 }, () => Math.floor(Math.random() * 10));
+  if (new Set(digits).size === 1) digits[0] = (digits[0] + 1) % 10;
+  function checkDigit(values) {
+    const sum = values.reduce((total, digit, index) => total + digit * (values.length + 1 - index), 0);
+    const remainder = sum % 11;
+    return remainder < 2 ? 0 : 11 - remainder;
+  }
+  digits.push(checkDigit(digits));
+  digits.push(checkDigit(digits));
+  bru.setVar("erroCpf", digits.join(""));
+  const stamp = Date.now().toString();
+  bru.setVar("erroChassi", "BRUN" + stamp);
+  bru.setVar("erroRenavam", stamp.slice(-11));
+  const letters = Array.from({ length: 3 }, () => String.fromCharCode(65 + Math.floor(Math.random() * 26))).join("");
+  bru.setVar("erroPlaca", letters + String(Math.floor(Math.random() * 10000)).padStart(4, "0"));
+  for (const key of ["erroProprietarioId", "erroVeiculoId", "erroHistoricoId", "erroLogId"]) bru.deleteVar(key);
+  bru.setVar("erroChassi2", "SEG" + Date.now().toString());
+  bru.setVar("erroRenavam2", String((Number(bru.getVar("erroRenavam")) + 1) % 100000000000).padStart(11, "0"));
+  bru.setVar("erroPlaca2", "ZZZ" + String((Number(bru.getVar("erroPlaca").slice(-4)) + 1) % 10000).padStart(4, "0"));
+  bru.setVar("erroNovoChassi", "NOV" + Date.now().toString());
+  bru.setVar("erroNovoRenavam", String((Number(bru.getVar("erroRenavam")) + 2) % 100000000000).padStart(11, "0"));
+  bru.setVar("erroNovaPlaca", "YYY" + String((Number(bru.getVar("erroPlaca").slice(-4)) + 2) % 10000).padStart(4, "0"));
+}
+
+script:post-response {
+  if (res.getStatus() === 201) { bru.setVar("erroProprietarioId", res.getBody().id); bru.setVar("erroProprietarioIdOriginal", res.getBody()); }
+}
+
+tests {
+  test("NEG-001: HTTP 201", function () {
+    expect(res.getStatus()).to.equal(201);
+  });
+}

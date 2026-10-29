@@ -1,0 +1,23 @@
+meta {
+  name: Confirmar proprietario excluido
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/proprietarios/{{proprietarioId}}
+  body: none
+  auth: none
+}
+
+tests {
+  test("Status HTTP 404", function () {
+    expect(res.getStatus()).to.equal(404);
+  });
+  test("Erro no formato da API", function () {
+    const body = res.getBody();
+    expect(body.status).to.equal(res.getStatus());
+    expect(body.mensagem).to.be.a("string").and.not.empty;
+    expect(body.erros).to.be.an("array");
+  });
+}

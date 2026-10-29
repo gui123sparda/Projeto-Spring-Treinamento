@@ -1,0 +1,30 @@
+meta {
+  name: Atualizar veiculo
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/api/veiculos/{{veiculoId}}
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {"anoFabricacao": 2025, "placa": null}
+}
+
+tests {
+  test("Status HTTP 200", function () {
+    expect(res.getStatus()).to.equal(200);
+  });
+  test("Atualizacao parcial preserva placa nula", function () {
+    expect(res.getBody().anoFabricacao).to.equal(2025);
+    expect(res.getBody().placa).to.equal(bru.getVar("placa"));
+    expect(res.getBody().idProprietario).to.equal(bru.getVar("proprietarioId"));
+  });
+}

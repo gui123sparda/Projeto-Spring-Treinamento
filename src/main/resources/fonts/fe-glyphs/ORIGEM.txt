@@ -1,0 +1,7 @@
+Glifos FE-Schrift rasterizados a partir do SVG vetorial original:
+https://commons.wikimedia.org/wiki/File:FE-Schrift.svg
+https://commons.wikimedia.org/wiki/Special:Redirect/file/FE-Schrift.svg
+Crédito: Liftarn; revisão vetorial Xavax (2012), Minorax (2019).
+Classificado como domínio público (PD-text) na página original.
+As letras foram separadas e rasterizadas a 8x; a largura é ajustada na representação ilustrativa.
+Referências de geometria: anexos da Resolução CONTRAN 969/2022.

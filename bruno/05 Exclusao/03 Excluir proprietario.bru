@@ -1,0 +1,17 @@
+meta {
+  name: Excluir proprietario
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{baseUrl}}/api/proprietarios/{{proprietarioId}}
+  body: none
+  auth: none
+}
+
+tests {
+  test("Status HTTP 204", function () {
+    expect(res.getStatus()).to.equal(204);
+  });
+}

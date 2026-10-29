@@ -1,0 +1,17 @@
+meta {
+  name: Excluir veiculo
+  type: http
+  seq: 1
+}
+
+delete {
+  url: {{baseUrl}}/api/veiculos/{{veiculoId}}
+  body: none
+  auth: none
+}
+
+tests {
+  test("Status HTTP 204", function () {
+    expect(res.getStatus()).to.equal(204);
+  });
+}

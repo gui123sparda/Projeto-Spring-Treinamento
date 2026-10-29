@@ -1,0 +1,23 @@
+meta {
+  name: Listar veiculos paginados
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/veiculos?page=0&size=15&sort=id,desc
+  body: none
+  auth: none
+}
+
+tests {
+  test("Status HTTP 200", function () {
+    expect(res.getStatus()).to.equal(200);
+  });
+  test("Resposta paginada", function () {
+    const body = res.getBody();
+    expect(body.content).to.be.an("array");
+    expect(body.content.length).to.be.at.most(15);
+    expect(body.totalElements).to.be.a("number");
+  });
+}

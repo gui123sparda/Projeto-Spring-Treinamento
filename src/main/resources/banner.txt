@@ -1,0 +1,8 @@
+${AnsiColor.226}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  __${AnsiColor.190}___${AnsiColor.191}__ ${AnsiColor.155}__   ${AnsiColor.119}__ ${AnsiColor.120}___${AnsiColor.84}_${AnsiColor.85}__  __${AnsiColor.86}__${AnsiColor.50}___  ${AnsiColor.51}__${AnsiColor.45}___${AnsiColor.44}_  ${AnsiColor.74}____${AnsiColor.73}_  ${AnsiColor.67}_     ${AnsiColor.96}_ ${AnsiColor.132}__   ${AnsiColor.167}_ ${AnsiColor.161}_     ${AnsiColor.197}_ ${AnsiColor.226}┃
+┃  |         ${AnsiColor.155}\_/   ${AnsiColor.120}|__${AnsiColor.84}_${AnsiColor.85}__] |_${AnsiColor.86}__${AnsiColor.50}___ ${AnsiColor.51}|__${AnsiColor.45}___${AnsiColor.44}/ |${AnsiColor.74}____${AnsiColor.73}_] ${AnsiColor.67}|     ${AnsiColor.96}| ${AnsiColor.132}| \  ${AnsiColor.167}| ${AnsiColor.161}|___${AnsiColor.197}_/  ${AnsiColor.226}┃
+┃  |_${AnsiColor.190}___${AnsiColor.191}_     ${AnsiColor.155}|    ${AnsiColor.120}|__${AnsiColor.84}_${AnsiColor.85}__] |_${AnsiColor.86}__${AnsiColor.50}___ ${AnsiColor.51}|    ${AnsiColor.45}${banner.backslash}${AnsiColor.44}_ |       ${AnsiColor.67}|_${AnsiColor.103}__${AnsiColor.102}_${AnsiColor.96}_| ${AnsiColor.132}|  ${banner.backslash}${AnsiColor.131}_${AnsiColor.167}| ${AnsiColor.161}|    ${AnsiColor.197}\_ ${AnsiColor.226}┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛${AnsiColor.DEFAULT}
+
+${AnsiColor.51} Acorda, samurai. Temos um deploy para fazer.${AnsiColor.DEFAULT}
+ ${AnsiStyle.BOLD}${application.title} ${application.version}${AnsiStyle.NORMAL} ${AnsiColor.BRIGHT_BLACK}· Spring Boot ${spring-boot.version} · ${application.owner}${AnsiColor.DEFAULT}

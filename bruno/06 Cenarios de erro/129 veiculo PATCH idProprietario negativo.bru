@@ -1,0 +1,43 @@
+meta {
+  name: NEG-129 veiculo PATCH idProprietario negativo
+  type: http
+  seq: 129
+}
+
+patch {
+  url: {{baseUrl}}/api/veiculos/{{erroVeiculoId}}
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {"idProprietario": -1}
+}
+
+tests {
+  test("NEG-129: HTTP 400", function () {
+    expect(res.getStatus()).to.equal(400);
+  });
+  test("Contrato de erro e ausencia de detalhes internos", function () {
+    const b = res.getBody();
+    expect(b.status).to.equal(res.getStatus());
+    expect(b.mensagem).to.be.a("string").and.not.empty;
+    expect(b.excecao).to.be.a("string").and.not.empty;
+    expect(b.dataHora).to.match(/^\d{2}\/\d{2}\/\d{4} \d{2}:\d{2}:\d{2}$/);
+    expect(b.erros).to.be.an("array");
+    for (const erro of b.erros) {
+      expect(erro.campo).to.be.a("string").and.not.empty;
+      expect(erro.mensagem).to.be.a("string").and.not.empty;
+    }
+    expect(b).not.to.have.property("stackTrace");
+    expect(b).not.to.have.property("trace");
+    expect(b.mensagem).not.to.match(/org\.hibernate|org\.postgresql|INSERT INTO|UPDATE treino/i);
+  });
+  test("Campo rejeitado: idProprietario", function () {
+    expect(res.getBody().erros.some(e => e.campo === "idProprietario")).to.equal(true);
+  });
+}

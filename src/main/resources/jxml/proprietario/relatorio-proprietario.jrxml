@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relatorio_proprietario" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" isSummaryWithPageHeaderAndFooter="true" columnWidth="523" leftMargin="36" rightMargin="36" topMargin="32" bottomMargin="20">
+<style name="Institucional" isDefault="true" fontName="Maitree" fontSize="9"/>
+	<parameter name="TITULO" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Relatório do proprietário"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="TIPO" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Pessoa Física"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="DOCUMENTO_LABEL" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{TIPO}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="TOTAL_VEICULOS" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[$P{TOTAL_VEICULOS}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="BRASAO_DETRAN" class="java.io.InputStream">
+		<defaultValueExpression><![CDATA[new java.io.FileInputStream("/home/guisparda/desenvolvimento/projetos/java/TreinamentoCRUDServlet/src/main/webapp/assets/img/BRASAO_DETRAN.png")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="LOGO_ESTADO_CE" class="java.io.InputStream">
+		<defaultValueExpression><![CDATA[new java.io.FileInputStream("/home/guisparda/desenvolvimento/projetos/java/TreinamentoCRUDServlet/src/main/webapp/assets/img/LOGO_ESTADO_CE.png")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="RODAPE" class="java.io.InputStream">
+		<defaultValueExpression><![CDATA[new java.io.FileInputStream("/home/guisparda/desenvolvimento/projetos/java/TreinamentoCRUDServlet/src/main/webapp/assets/img/RODAPE.png")]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT id::bigint AS id, cpf_cnpj AS "cpfCnpj", nome, rua, numero, cep, cidade, estado, complemento
+FROM treino.proprietario
+ORDER BY nome, id]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cpfCnpj" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="rua" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="numero" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cep" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cidade" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="complemento" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<title><band height="150">
+ <image scaleImage="RetainShape"><reportElement x="30" y="24" width="51" height="58"/><imageExpression><![CDATA[$P{BRASAO_DETRAN}]]></imageExpression></image>
+ <image scaleImage="RetainShape"><reportElement x="255" y="8" width="238" height="76"/><imageExpression><![CDATA[$P{LOGO_ESTADO_CE}]]></imageExpression></image>
+ <textField><reportElement x="0" y="98" width="523" height="30" forecolor="#465564"/><textElement><font fontName="Kanit" size="20" isBold="true"/></textElement><textFieldExpression><![CDATA[$P{TITULO}]]></textFieldExpression></textField>
+ <textField pattern="dd/MM/yyyy HH:mm"><reportElement x="0" y="132" width="400" height="16" forecolor="#465564"/><textElement><font fontName="Kanit" size="9"/></textElement><textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression></textField>
+ </band></title>
+	<detail><band height="380" splitType="Stretch"><textField isBlankWhenNull="true" isStretchWithOverflow="true"><reportElement x="0" y="0" width="523" height="25"/><textElement><font fontName="Kanit" size="13" isBold="true"/></textElement><textFieldExpression><![CDATA[$P{TIPO}]]></textFieldExpression></textField><textField isBlankWhenNull="true" isStretchWithOverflow="true"><reportElement x="0" y="35" width="523" height="45"/><textElement><font fontName="Kanit" size="12" isBold="true"/></textElement><textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression></textField><textField isBlankWhenNull="true" isStretchWithOverflow="true"><reportElement x="0" y="90" width="523" height="24"/><textElement><font fontName="Maitree" size="10" isBold="false"/></textElement><textFieldExpression><![CDATA[$P{DOCUMENTO_LABEL} + ": " + $F{cpfCnpj}]]></textFieldExpression></textField><textField isBlankWhenNull="true" isStretchWithOverflow="true"><reportElement x="0" y="133" width="523" height="25"/><textElement><font fontName="Kanit" size="13" isBold="true"/></textElement><textFieldExpression><![CDATA["Endereço"]]></textFieldExpression></textField><textField isBlankWhenNull="true" isStretchWithOverflow="true"><reportElement x="0" y="168" width="523" height="45"/><textElement><font fontName="Maitree" size="10" isBold="false"/></textElement><textFieldExpression><![CDATA["Rua: " + $F{rua} + " • Nº: " + $F{numero}]]></textFieldExpression></textField><textField isBlankWhenNull="true" isStretchWithOverflow="true"><reportElement x="0" y="219" width="523" height="65"/><textElement><font fontName="Maitree" size="9" isBold="false"/></textElement><textFieldExpression><![CDATA["Complemento: " + $F{complemento}]]></textFieldExpression></textField><textField isBlankWhenNull="true" isStretchWithOverflow="true"><reportElement x="0" y="290" width="523" height="40"/><textElement><font fontName="Maitree" size="10" isBold="false"/></textElement><textFieldExpression><![CDATA[$F{cidade} + " - " + $F{estado} + " • CEP: " + $F{cep}]]></textFieldExpression></textField><textField isBlankWhenNull="true" isStretchWithOverflow="true"><reportElement x="0" y="345" width="523" height="26"/><textElement><font fontName="Kanit" size="11" isBold="true"/></textElement><textFieldExpression><![CDATA["Veículos ativos vinculados: " + $P{TOTAL_VEICULOS}]]></textFieldExpression></textField></band></detail>
+	<pageFooter><band height="50">
+ <staticText><reportElement x="0" y="0" width="440" height="14" forecolor="#465564"/><textElement><font fontName="Kanit" size="8"/></textElement><text><![CDATA[DETRAN-CE • Sistema de treinamento • Consulta cadastral]]></text></staticText>
+ <textField><reportElement x="440" y="0" width="83" height="14"/><textElement textAlignment="Right"><font fontName="Kanit" size="8"/></textElement><textFieldExpression><![CDATA["Página " + $V{PAGE_NUMBER}]]></textFieldExpression></textField>
+ <image scaleImage="RetainShape"><reportElement x="-36" y="19" width="595" height="31"/><imageExpression><![CDATA[$P{RODAPE}]]></imageExpression></image>
+ </band></pageFooter>
+</jasperReport>

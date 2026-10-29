@@ -1,0 +1,20 @@
+meta {
+  name: NEG-211 Listagem oculta veiculos inativos
+  type: http
+  seq: 211
+}
+
+get {
+  url: {{baseUrl}}/api/veiculos
+  body: none
+  auth: none
+}
+
+tests {
+  test("NEG-211: HTTP 200", function () {
+    expect(res.getStatus()).to.equal(200);
+  });
+  test("Efeito esperado", function () {
+    expect(res.getBody().content.some(v => [bru.getVar("erroVeiculoId"), bru.getVar("erroVeiculo2Id")].includes(v.id))).to.equal(false);
+  });
+}

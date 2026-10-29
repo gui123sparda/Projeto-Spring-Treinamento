@@ -1,0 +1,23 @@
+meta {
+  name: Rejeitar ID invalido
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/api/veiculos/abc
+  body: none
+  auth: none
+}
+
+tests {
+  test("Status HTTP 400", function () {
+    expect(res.getStatus()).to.equal(400);
+  });
+  test("Erro no formato da API", function () {
+    const body = res.getBody();
+    expect(body.status).to.equal(res.getStatus());
+    expect(body.mensagem).to.be.a("string").and.not.empty;
+    expect(body.erros).to.be.an("array");
+  });
+}

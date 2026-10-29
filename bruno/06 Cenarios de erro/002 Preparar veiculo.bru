@@ -1,0 +1,29 @@
+meta {
+  name: NEG-002 Preparar veiculo
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/api/veiculos
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {"tipo": "CARRO", "idProprietario": {{erroProprietarioId}}, "anoFabricacao": 2024, "chassi": "{{erroChassi}}", "renavam": "{{erroRenavam}}", "placa": "{{erroPlaca}}"}
+}
+
+script:post-response {
+  if (res.getStatus() === 201) { bru.setVar("erroVeiculoId", res.getBody().id); bru.setVar("erroVeiculoIdOriginal", res.getBody()); }
+}
+
+tests {
+  test("NEG-002: HTTP 201", function () {
+    expect(res.getStatus()).to.equal(201);
+  });
+}

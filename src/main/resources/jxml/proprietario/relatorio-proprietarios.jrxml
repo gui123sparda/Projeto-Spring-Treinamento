@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relatorio_proprietarios" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" isSummaryWithPageHeaderAndFooter="true" columnWidth="523" leftMargin="36" rightMargin="36" topMargin="32" bottomMargin="20">
+<style name="Institucional" isDefault="true" fontName="Maitree" fontSize="9"/>
+	<parameter name="TITULO" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{TITULO}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="TOTAL" class="java.lang.Integer"/>
+	<parameter name="BRASAO_DETRAN" class="java.io.InputStream"/>
+	<parameter name="LOGO_ESTADO_CE" class="java.io.InputStream"/>
+	<parameter name="RODAPE" class="java.io.InputStream"/>
+	<queryString>
+		<![CDATA[SELECT id::bigint AS id, cpf_cnpj AS "cpfCnpj", nome, rua, numero, cep, cidade, estado, complemento
+FROM treino.proprietario
+ORDER BY nome, id]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cpfCnpj" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="rua" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="numero" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cep" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cidade" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="complemento" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="ProprietariosPorPagina" isStartNewPage="true">
+		<groupExpression><![CDATA["pagina-" + (($V{REPORT_COUNT}.intValue() - 1) / 15)]]></groupExpression>
+	</group>
+	<title><band height="150">
+ <image scaleImage="RetainShape"><reportElement x="30" y="24" width="51" height="58"/><imageExpression><![CDATA[$P{BRASAO_DETRAN}]]></imageExpression></image>
+ <image scaleImage="RetainShape"><reportElement x="255" y="8" width="238" height="76"/><imageExpression><![CDATA[$P{LOGO_ESTADO_CE}]]></imageExpression></image>
+ <textField><reportElement x="0" y="98" width="523" height="30" forecolor="#465564"/><textElement><font fontName="Kanit" size="20" isBold="true"/></textElement><textFieldExpression><![CDATA[$P{TITULO}]]></textFieldExpression></textField>
+ <textField pattern="dd/MM/yyyy HH:mm"><reportElement x="0" y="132" width="400" height="16" forecolor="#465564"/><textElement><font fontName="Kanit" size="9"/></textElement><textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression></textField>
+ </band></title>
+	
+	<detail><band height="116" splitType="Stretch"><textField isBlankWhenNull="true" isStretchWithOverflow="true"><reportElement x="0" y="5" width="523" height="28"/><textElement><font fontName="Kanit" size="11" isBold="true"/></textElement><textFieldExpression><![CDATA["Nome: " + ($F{nome} == null ? "—" : $F{nome})]]></textFieldExpression></textField><textField isBlankWhenNull="true" ><reportElement x="0" y="29" width="523" height="20"/><textElement><font fontName="Maitree" size="9" isBold="false"/></textElement><textFieldExpression><![CDATA["CPF / CNPJ: " + ($F{cpfCnpj} == null ? "—" : $F{cpfCnpj})]]></textFieldExpression></textField><textField isBlankWhenNull="true" isStretchWithOverflow="true"><reportElement x="0" y="49" width="400" height="26"/><textElement><font fontName="Maitree" size="9" isBold="false"/></textElement><textFieldExpression><![CDATA["Rua: " + ($F{rua} == null ? "—" : $F{rua})]]></textFieldExpression></textField><textField isBlankWhenNull="true" ><reportElement x="410" y="49" width="113" height="26"/><textElement><font fontName="Maitree" size="9" isBold="false"/></textElement><textFieldExpression><![CDATA["Nº: " + ($F{numero} == null ? "—" : $F{numero})]]></textFieldExpression></textField><textField isBlankWhenNull="true" ><reportElement x="0" y="73" width="523" height="24"/><textElement><font fontName="Maitree" size="9" isBold="false"/></textElement><textFieldExpression><![CDATA["Cidade: " + ($F{cidade} == null ? "—" : $F{cidade}) + " • UF: " + ($F{estado} == null ? "—" : $F{estado}) + " • CEP: " + ($F{cep} == null ? "—" : $F{cep})]]></textFieldExpression></textField><textField isBlankWhenNull="true" isStretchWithOverflow="true"><reportElement x="0" y="94" width="523" height="19"/><textElement><font fontName="Maitree" size="9" isBold="false"/></textElement><textFieldExpression><![CDATA["Compl.: " + ($F{complemento} == null ? "—" : $F{complemento})]]></textFieldExpression></textField><line><reportElement positionType="FixRelativeToBottom" x="0" y="114" width="523" height="1" forecolor="#DCDCDC"/></line></band></detail>
+	<pageFooter><band height="50">
+ <staticText><reportElement x="0" y="0" width="440" height="14" forecolor="#465564"/><textElement><font fontName="Kanit" size="8"/></textElement><text><![CDATA[DETRAN-CE • Sistema de treinamento • Consulta cadastral]]></text></staticText>
+ <textField><reportElement x="440" y="0" width="83" height="14"/><textElement textAlignment="Right"><font fontName="Kanit" size="8"/></textElement><textFieldExpression><![CDATA["Página " + $V{PAGE_NUMBER}]]></textFieldExpression></textField>
+ <image scaleImage="RetainShape"><reportElement x="-36" y="19" width="595" height="31"/><imageExpression><![CDATA[$P{RODAPE}]]></imageExpression></image>
+ </band></pageFooter>
+	<summary>
+		<band height="38">
+			<textField>
+				<reportElement x="0" y="12" width="500" height="20"/>
+				<textElement>
+					<font fontName="Maitree" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Total de registros: " + $P{TOTAL}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

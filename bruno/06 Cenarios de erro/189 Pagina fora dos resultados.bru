@@ -1,0 +1,20 @@
+meta {
+  name: NEG-189 Pagina fora dos resultados
+  type: http
+  seq: 189
+}
+
+get {
+  url: {{baseUrl}}/api/veiculos?page=100000
+  body: none
+  auth: none
+}
+
+tests {
+  test("NEG-189: HTTP 200", function () {
+    expect(res.getStatus()).to.equal(200);
+  });
+  test("Efeito esperado", function () {
+    expect(res.getBody().content).to.deep.equal([]);
+  });
+}

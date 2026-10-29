@@ -1,0 +1,20 @@
+meta {
+  name: NEG-213 Log preservado apos exclusao
+  type: http
+  seq: 213
+}
+
+get {
+  url: {{baseUrl}}/api/log-proprietarios
+  body: none
+  auth: none
+}
+
+tests {
+  test("NEG-213: HTTP 200", function () {
+    expect(res.getStatus()).to.equal(200);
+  });
+  test("Efeito esperado", function () {
+    expect(res.getBody().some(l => l.idProprietario === bru.getVar("erroProprietarioId"))).to.equal(true);
+  });
+}

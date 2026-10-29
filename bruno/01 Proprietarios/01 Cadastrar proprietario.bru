@@ -1,0 +1,66 @@
+meta {
+  name: Cadastrar proprietario
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/proprietarios
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "cpfCnpj": "{{cpf}}",
+    "nome": "Pessoa Teste Bruno",
+    "rua": "Rua de Teste",
+    "numero": "100",
+    "cep": "60000-000",
+    "cidade": "Fortaleza",
+    "estado": "CE",
+    "complemento": "Sala 1"
+  }
+}
+
+script:pre-request {
+  // Novos dados a cada execução, inclusive após exclusão lógica.
+  const digits = Array.from({ length: 9 }, () => Math.floor(Math.random() * 10));
+  if (new Set(digits).size === 1) digits[0] = (digits[0] + 1) % 10;
+  function checkDigit(values) {
+    const sum = values.reduce((total, digit, index) => total + digit * (values.length + 1 - index), 0);
+    const remainder = sum % 11;
+    return remainder < 2 ? 0 : 11 - remainder;
+  }
+  digits.push(checkDigit(digits));
+  digits.push(checkDigit(digits));
+  bru.setVar("cpf", digits.join(""));
+  const stamp = Date.now().toString();
+  bru.setVar("chassi", "BRUN" + stamp);
+  bru.setVar("renavam", stamp.slice(-11));
+  const letters = Array.from({ length: 3 }, () => String.fromCharCode(65 + Math.floor(Math.random() * 26))).join("");
+  bru.setVar("placa", letters + String(Math.floor(Math.random() * 10000)).padStart(4, "0"));
+  for (const key of ["proprietarioId", "veiculoId", "historicoId", "logId"]) bru.deleteVar(key);
+}
+
+script:post-response {
+  if (res.getStatus() === 201) {
+    bru.setVar("proprietarioId", res.getBody().id);
+  }
+}
+
+tests {
+  test("Status HTTP 201", function () {
+    expect(res.getStatus()).to.equal(201);
+  });
+  test("Cadastro e normalizacao", function () {
+    expect(res.getBody().id).to.be.a("number").and.above(0);
+    expect(res.getBody().cpfCnpj).to.equal(bru.getVar("cpf"));
+    expect(res.getBody().nome).to.equal("PESSOA TESTE BRUNO");
+    expect(res.getBody().cep).to.equal("60000000");
+  });
+}

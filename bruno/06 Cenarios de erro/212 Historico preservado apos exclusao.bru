@@ -1,0 +1,20 @@
+meta {
+  name: NEG-212 Historico preservado apos exclusao
+  type: http
+  seq: 212
+}
+
+get {
+  url: {{baseUrl}}/api/historico
+  body: none
+  auth: none
+}
+
+tests {
+  test("NEG-212: HTTP 200", function () {
+    expect(res.getStatus()).to.equal(200);
+  });
+  test("Efeito esperado", function () {
+    expect(res.getBody().some(h => h.entidade === "proprietario" && h.registroId === bru.getVar("erroProprietarioId") && h.operacao === "EXCLUSAO_LOGICA")).to.equal(true);
+  });
+}

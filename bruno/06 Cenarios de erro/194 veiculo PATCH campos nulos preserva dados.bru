@@ -1,0 +1,28 @@
+meta {
+  name: NEG-194 veiculo PATCH campos nulos preserva dados
+  type: http
+  seq: 194
+}
+
+patch {
+  url: {{baseUrl}}/api/veiculos/{{erroVeiculoId}}
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {"tipo": null, "placa": null, "anoFabricacao": null}
+}
+
+tests {
+  test("NEG-194: HTTP 200", function () {
+    expect(res.getStatus()).to.equal(200);
+  });
+  test("Efeito esperado", function () {
+    expect(res.getBody()).to.deep.equal(bru.getVar("erroVeiculoIdOriginal"));
+  });
+}

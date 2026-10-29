@@ -1,0 +1,28 @@
+meta {
+  name: NEG-193 veiculo PATCH vazio preserva dados
+  type: http
+  seq: 193
+}
+
+patch {
+  url: {{baseUrl}}/api/veiculos/{{erroVeiculoId}}
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {}
+}
+
+tests {
+  test("NEG-193: HTTP 200", function () {
+    expect(res.getStatus()).to.equal(200);
+  });
+  test("Efeito esperado", function () {
+    expect(res.getBody()).to.deep.equal(bru.getVar("erroVeiculoIdOriginal"));
+  });
+}

@@ -1,0 +1,21 @@
+meta {
+  name: NEG-183 Paginacao normaliza page -1
+  type: http
+  seq: 183
+}
+
+get {
+  url: {{baseUrl}}/api/veiculos?page=-1
+  body: none
+  auth: none
+}
+
+tests {
+  test("NEG-183: HTTP 200", function () {
+    expect(res.getStatus()).to.equal(200);
+  });
+  test("Efeito esperado", function () {
+    expect(res.getBody().number).to.equal(0);
+    expect(res.getBody().content.length).to.be.at.most(15);
+  });
+}

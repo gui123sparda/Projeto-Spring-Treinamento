@@ -1,0 +1,43 @@
+meta {
+  name: NEG-108 veiculo POST renavam vazio
+  type: http
+  seq: 108
+}
+
+post {
+  url: {{baseUrl}}/api/veiculos
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {"tipo": "CARRO", "idProprietario": {{erroProprietarioId}}, "anoFabricacao": 2024, "chassi": "{{erroChassi}}", "renavam": "", "placa": "{{erroPlaca}}"}
+}
+
+tests {
+  test("NEG-108: HTTP 400", function () {
+    expect(res.getStatus()).to.equal(400);
+  });
+  test("Contrato de erro e ausencia de detalhes internos", function () {
+    const b = res.getBody();
+    expect(b.status).to.equal(res.getStatus());
+    expect(b.mensagem).to.be.a("string").and.not.empty;
+    expect(b.excecao).to.be.a("string").and.not.empty;
+    expect(b.dataHora).to.match(/^\d{2}\/\d{2}\/\d{4} \d{2}:\d{2}:\d{2}$/);
+    expect(b.erros).to.be.an("array");
+    for (const erro of b.erros) {
+      expect(erro.campo).to.be.a("string").and.not.empty;
+      expect(erro.mensagem).to.be.a("string").and.not.empty;
+    }
+    expect(b).not.to.have.property("stackTrace");
+    expect(b).not.to.have.property("trace");
+    expect(b.mensagem).not.to.match(/org\.hibernate|org\.postgresql|INSERT INTO|UPDATE treino/i);
+  });
+  test("Campo rejeitado: renavam", function () {
+    expect(res.getBody().erros.some(e => e.campo === "renavam")).to.equal(true);
+  });
+}

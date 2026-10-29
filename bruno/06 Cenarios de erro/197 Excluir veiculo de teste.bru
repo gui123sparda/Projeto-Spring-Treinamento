@@ -1,0 +1,17 @@
+meta {
+  name: NEG-197 Excluir veiculo de teste
+  type: http
+  seq: 197
+}
+
+delete {
+  url: {{baseUrl}}/api/veiculos/{{erroVeiculoId}}
+  body: none
+  auth: none
+}
+
+tests {
+  test("NEG-197: HTTP 204", function () {
+    expect(res.getStatus()).to.equal(204);
+  });
+}

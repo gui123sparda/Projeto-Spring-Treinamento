@@ -1,0 +1,43 @@
+meta {
+  name: NEG-170 proprietarios PUT nao permitido
+  type: http
+  seq: 170
+}
+
+put {
+  url: {{baseUrl}}/api/proprietarios
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {}
+}
+
+tests {
+  test("NEG-170: HTTP 405", function () {
+    expect(res.getStatus()).to.equal(405);
+  });
+  test("Contrato de erro e ausencia de detalhes internos", function () {
+    const b = res.getBody();
+    expect(b.status).to.equal(res.getStatus());
+    expect(b.mensagem).to.be.a("string").and.not.empty;
+    expect(b.excecao).to.be.a("string").and.not.empty;
+    expect(b.dataHora).to.match(/^\d{2}\/\d{2}\/\d{4} \d{2}:\d{2}:\d{2}$/);
+    expect(b.erros).to.be.an("array");
+    for (const erro of b.erros) {
+      expect(erro.campo).to.be.a("string").and.not.empty;
+      expect(erro.mensagem).to.be.a("string").and.not.empty;
+    }
+    expect(b).not.to.have.property("stackTrace");
+    expect(b).not.to.have.property("trace");
+    expect(b.mensagem).not.to.match(/org\.hibernate|org\.postgresql|INSERT INTO|UPDATE treino/i);
+  });
+  test("Efeito esperado", function () {
+    expect(res.getHeader("allow")).to.be.a("string").and.not.empty;
+  });
+}

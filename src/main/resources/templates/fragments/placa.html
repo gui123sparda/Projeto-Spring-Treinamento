@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org"><body>
+<figure th:fragment="placa(veiculo)" class="placa-figure" th:classappend="${veiculo.tipo == 'MOTO'} ? 'placa-formato-moto'">
+    <div class="hover-3d placa-hover-3d" th:style="|--placa-proporcao: ${veiculo.tipo == 'MOTO' ? '200/170' : (veiculo.placa.matches('[A-Z]{3}[0-9][A-Z][0-9]{2}') ? '520/140' : '400/130')}|">
+        <img class="placa-renderizada" th:classappend="${veiculo.tipo == 'MOTO'} ? 'moto'" th:src="@{/veiculos/{id}/placa.png(id=${veiculo.id})}" th:alt="|Representação ilustrativa da placa ${veiculo.placa}|">
+        <div aria-hidden="true"></div><div aria-hidden="true"></div><div aria-hidden="true"></div><div aria-hidden="true"></div>
+        <div aria-hidden="true"></div><div aria-hidden="true"></div><div aria-hidden="true"></div><div aria-hidden="true"></div>
+    </div>
+    <figcaption>Representação ilustrativa da placa; QR ilustrativo no padrão Mercosul.</figcaption>
+</figure>
+</body></html>

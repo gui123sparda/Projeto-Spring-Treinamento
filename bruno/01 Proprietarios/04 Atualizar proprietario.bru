@@ -1,0 +1,31 @@
+meta {
+  name: Atualizar proprietario
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/api/proprietarios/{{proprietarioId}}
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {"nome": "Pessoa Atualizada Bruno", "numero": "200"}
+}
+
+tests {
+  test("Status HTTP 200", function () {
+    expect(res.getStatus()).to.equal(200);
+  });
+  test("Atualizacao parcial preserva CPF", function () {
+    expect(res.getBody().nome).to.equal("PESSOA ATUALIZADA BRUNO");
+    expect(res.getBody().numero).to.equal("200");
+    expect(res.getBody().cpfCnpj).to.equal(bru.getVar("cpf"));
+    expect(res.getBody().cidade).to.equal("FORTALEZA");
+  });
+}

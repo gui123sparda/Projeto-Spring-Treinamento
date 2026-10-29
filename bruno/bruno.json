@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "API Proprietários e Veículos",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

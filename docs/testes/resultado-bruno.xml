@@ -1,0 +1,1048 @@
+<?xml version="1.0"?>
+<testsuites>
+  <testsuite name="Cadastrar proprietario" file="01 Proprietarios/01 Cadastrar proprietario.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.344">
+    <testcase name="Status HTTP 201" status="pass" classname="01 Proprietarios/01 Cadastrar proprietario" time="0.172"/>
+    <testcase name="Cadastro e normalizacao" status="pass" classname="01 Proprietarios/01 Cadastrar proprietario" time="0.172"/>
+  </testsuite>
+  <testsuite name="Listar proprietarios" file="01 Proprietarios/02 Listar proprietarios.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.073">
+    <testcase name="Status HTTP 200" status="pass" classname="01 Proprietarios/02 Listar proprietarios" time="0.036"/>
+    <testcase name="Lista inclui o cadastro" status="pass" classname="01 Proprietarios/02 Listar proprietarios" time="0.036"/>
+  </testsuite>
+  <testsuite name="Buscar proprietario" file="01 Proprietarios/03 Buscar proprietario.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.072">
+    <testcase name="Status HTTP 200" status="pass" classname="01 Proprietarios/03 Buscar proprietario" time="0.036"/>
+    <testcase name="ID do proprietario" status="pass" classname="01 Proprietarios/03 Buscar proprietario" time="0.036"/>
+  </testsuite>
+  <testsuite name="Atualizar proprietario" file="01 Proprietarios/04 Atualizar proprietario.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.082">
+    <testcase name="Status HTTP 200" status="pass" classname="01 Proprietarios/04 Atualizar proprietario" time="0.041"/>
+    <testcase name="Atualizacao parcial preserva CPF" status="pass" classname="01 Proprietarios/04 Atualizar proprietario" time="0.041"/>
+  </testsuite>
+  <testsuite name="Cadastrar veiculo" file="02 Veiculos/01 Cadastrar veiculo.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.141">
+    <testcase name="Status HTTP 201" status="pass" classname="02 Veiculos/01 Cadastrar veiculo" time="0.070"/>
+    <testcase name="Veiculo vinculado ao proprietario" status="pass" classname="02 Veiculos/01 Cadastrar veiculo" time="0.070"/>
+  </testsuite>
+  <testsuite name="Listar veiculos paginados" file="02 Veiculos/02 Listar veiculos paginados.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.088">
+    <testcase name="Status HTTP 200" status="pass" classname="02 Veiculos/02 Listar veiculos paginados" time="0.044"/>
+    <testcase name="Resposta paginada" status="pass" classname="02 Veiculos/02 Listar veiculos paginados" time="0.044"/>
+  </testsuite>
+  <testsuite name="Buscar veiculo" file="02 Veiculos/03 Buscar veiculo.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.071">
+    <testcase name="Status HTTP 200" status="pass" classname="02 Veiculos/03 Buscar veiculo" time="0.036"/>
+    <testcase name="ID do veiculo" status="pass" classname="02 Veiculos/03 Buscar veiculo" time="0.036"/>
+  </testsuite>
+  <testsuite name="Atualizar veiculo" file="02 Veiculos/04 Atualizar veiculo.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.069">
+    <testcase name="Status HTTP 200" status="pass" classname="02 Veiculos/04 Atualizar veiculo" time="0.035"/>
+    <testcase name="Atualizacao parcial preserva placa nula" status="pass" classname="02 Veiculos/04 Atualizar veiculo" time="0.035"/>
+  </testsuite>
+  <testsuite name="Listar historico" file="03 Auditoria/01 Listar historico.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.131">
+    <testcase name="Status HTTP 200" status="pass" classname="03 Auditoria/01 Listar historico" time="0.065"/>
+    <testcase name="Auditoria gerada pelo banco" status="pass" classname="03 Auditoria/01 Listar historico" time="0.065"/>
+  </testsuite>
+  <testsuite name="Buscar historico" file="03 Auditoria/02 Buscar historico.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.065">
+    <testcase name="Status HTTP 200" status="pass" classname="03 Auditoria/02 Buscar historico" time="0.033"/>
+    <testcase name="ID da auditoria" status="pass" classname="03 Auditoria/02 Buscar historico" time="0.033"/>
+  </testsuite>
+  <testsuite name="Listar logs" file="03 Auditoria/03 Listar logs.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.123">
+    <testcase name="Status HTTP 200" status="pass" classname="03 Auditoria/03 Listar logs" time="0.061"/>
+    <testcase name="Auditoria gerada pelo banco" status="pass" classname="03 Auditoria/03 Listar logs" time="0.061"/>
+  </testsuite>
+  <testsuite name="Buscar logs" file="03 Auditoria/04 Buscar logs.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.063">
+    <testcase name="Status HTTP 200" status="pass" classname="03 Auditoria/04 Buscar logs" time="0.032"/>
+    <testcase name="ID da auditoria" status="pass" classname="03 Auditoria/04 Buscar logs" time="0.032"/>
+  </testsuite>
+  <testsuite name="Rejeitar CPF invalido" file="04 Validacoes/01 Rejeitar CPF invalido.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.067">
+    <testcase name="Status HTTP 400" status="pass" classname="04 Validacoes/01 Rejeitar CPF invalido" time="0.033"/>
+    <testcase name="Erro no formato da API" status="pass" classname="04 Validacoes/01 Rejeitar CPF invalido" time="0.033"/>
+  </testsuite>
+  <testsuite name="Rejeitar CPF duplicado" file="04 Validacoes/02 Rejeitar CPF duplicado.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.080">
+    <testcase name="Status HTTP 409" status="pass" classname="04 Validacoes/02 Rejeitar CPF duplicado" time="0.040"/>
+    <testcase name="Erro no formato da API" status="pass" classname="04 Validacoes/02 Rejeitar CPF duplicado" time="0.040"/>
+  </testsuite>
+  <testsuite name="Rejeitar alteracao de CPF" file="04 Validacoes/03 Rejeitar alteracao de CPF.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.117">
+    <testcase name="Status HTTP 400" status="pass" classname="04 Validacoes/03 Rejeitar alteracao de CPF" time="0.058"/>
+    <testcase name="Erro no formato da API" status="pass" classname="04 Validacoes/03 Rejeitar alteracao de CPF" time="0.058"/>
+  </testsuite>
+  <testsuite name="Rejeitar tipo invalido" file="04 Validacoes/04 Rejeitar tipo invalido.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.059">
+    <testcase name="Status HTTP 400" status="pass" classname="04 Validacoes/04 Rejeitar tipo invalido" time="0.030"/>
+    <testcase name="Erro no formato da API" status="pass" classname="04 Validacoes/04 Rejeitar tipo invalido" time="0.030"/>
+  </testsuite>
+  <testsuite name="Rejeitar ID invalido" file="04 Validacoes/05 Rejeitar ID invalido.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.069">
+    <testcase name="Status HTTP 400" status="pass" classname="04 Validacoes/05 Rejeitar ID invalido" time="0.034"/>
+    <testcase name="Erro no formato da API" status="pass" classname="04 Validacoes/05 Rejeitar ID invalido" time="0.034"/>
+  </testsuite>
+  <testsuite name="Excluir veiculo" file="05 Exclusao/01 Excluir veiculo.bru" errors="0" failures="0" skipped="0" tests="1" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.064">
+    <testcase name="Status HTTP 204" status="pass" classname="05 Exclusao/01 Excluir veiculo" time="0.064"/>
+  </testsuite>
+  <testsuite name="Confirmar veiculo excluido" file="05 Exclusao/02 Confirmar veiculo excluido.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="Status HTTP 404" status="pass" classname="05 Exclusao/02 Confirmar veiculo excluido" time="0.031"/>
+    <testcase name="Erro no formato da API" status="pass" classname="05 Exclusao/02 Confirmar veiculo excluido" time="0.031"/>
+  </testsuite>
+  <testsuite name="Excluir proprietario" file="05 Exclusao/03 Excluir proprietario.bru" errors="0" failures="0" skipped="0" tests="1" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.064">
+    <testcase name="Status HTTP 204" status="pass" classname="05 Exclusao/03 Excluir proprietario" time="0.064"/>
+  </testsuite>
+  <testsuite name="Confirmar proprietario excluido" file="05 Exclusao/04 Confirmar proprietario excluido.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="Status HTTP 404" status="pass" classname="05 Exclusao/04 Confirmar proprietario excluido" time="0.030"/>
+    <testcase name="Erro no formato da API" status="pass" classname="05 Exclusao/04 Confirmar proprietario excluido" time="0.030"/>
+  </testsuite>
+  <testsuite name="NEG-001 Preparar proprietario" file="06 Cenarios de erro/001 Preparar proprietario.bru" errors="0" failures="0" skipped="0" tests="1" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.179">
+    <testcase name="NEG-001: HTTP 201" status="pass" classname="06 Cenarios de erro/001 Preparar proprietario" time="0.179"/>
+  </testsuite>
+  <testsuite name="NEG-002 Preparar veiculo" file="06 Cenarios de erro/002 Preparar veiculo.bru" errors="0" failures="0" skipped="0" tests="1" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.122">
+    <testcase name="NEG-002: HTTP 201" status="pass" classname="06 Cenarios de erro/002 Preparar veiculo" time="0.122"/>
+  </testsuite>
+  <testsuite name="NEG-003 Preparar segundo veiculo" file="06 Cenarios de erro/003 Preparar segundo veiculo.bru" errors="0" failures="0" skipped="0" tests="1" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.123">
+    <testcase name="NEG-003: HTTP 201" status="pass" classname="06 Cenarios de erro/003 Preparar segundo veiculo" time="0.123"/>
+  </testsuite>
+  <testsuite name="NEG-004 proprietarios GET ID texto" file="06 Cenarios de erro/004 proprietarios GET ID texto.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-004: HTTP 400" status="pass" classname="06 Cenarios de erro/004 proprietarios GET ID texto" time="0.030"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/004 proprietarios GET ID texto" time="0.030"/>
+  </testsuite>
+  <testsuite name="NEG-005 proprietarios GET ID zero" file="06 Cenarios de erro/005 proprietarios GET ID zero.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.066">
+    <testcase name="NEG-005: HTTP 400" status="pass" classname="06 Cenarios de erro/005 proprietarios GET ID zero" time="0.033"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/005 proprietarios GET ID zero" time="0.033"/>
+  </testsuite>
+  <testsuite name="NEG-006 proprietarios GET ID negativo" file="06 Cenarios de erro/006 proprietarios GET ID negativo.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.065">
+    <testcase name="NEG-006: HTTP 400" status="pass" classname="06 Cenarios de erro/006 proprietarios GET ID negativo" time="0.032"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/006 proprietarios GET ID negativo" time="0.032"/>
+  </testsuite>
+  <testsuite name="NEG-007 proprietarios GET ID decimal" file="06 Cenarios de erro/007 proprietarios GET ID decimal.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.066">
+    <testcase name="NEG-007: HTTP 400" status="pass" classname="06 Cenarios de erro/007 proprietarios GET ID decimal" time="0.033"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/007 proprietarios GET ID decimal" time="0.033"/>
+  </testsuite>
+  <testsuite name="NEG-008 proprietarios GET ID overflow" file="06 Cenarios de erro/008 proprietarios GET ID overflow.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-008: HTTP 400" status="pass" classname="06 Cenarios de erro/008 proprietarios GET ID overflow" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/008 proprietarios GET ID overflow" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-009 proprietarios GET ID inexistente" file="06 Cenarios de erro/009 proprietarios GET ID inexistente.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-009: HTTP 404" status="pass" classname="06 Cenarios de erro/009 proprietarios GET ID inexistente" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/009 proprietarios GET ID inexistente" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-010 proprietarios PATCH ID texto" file="06 Cenarios de erro/010 proprietarios PATCH ID texto.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.059">
+    <testcase name="NEG-010: HTTP 400" status="pass" classname="06 Cenarios de erro/010 proprietarios PATCH ID texto" time="0.030"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/010 proprietarios PATCH ID texto" time="0.030"/>
+  </testsuite>
+  <testsuite name="NEG-011 proprietarios PATCH ID zero" file="06 Cenarios de erro/011 proprietarios PATCH ID zero.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-011: HTTP 400" status="pass" classname="06 Cenarios de erro/011 proprietarios PATCH ID zero" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/011 proprietarios PATCH ID zero" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-012 proprietarios PATCH ID negativo" file="06 Cenarios de erro/012 proprietarios PATCH ID negativo.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.060">
+    <testcase name="NEG-012: HTTP 400" status="pass" classname="06 Cenarios de erro/012 proprietarios PATCH ID negativo" time="0.030"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/012 proprietarios PATCH ID negativo" time="0.030"/>
+  </testsuite>
+  <testsuite name="NEG-013 proprietarios PATCH ID decimal" file="06 Cenarios de erro/013 proprietarios PATCH ID decimal.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-013: HTTP 400" status="pass" classname="06 Cenarios de erro/013 proprietarios PATCH ID decimal" time="0.030"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/013 proprietarios PATCH ID decimal" time="0.030"/>
+  </testsuite>
+  <testsuite name="NEG-014 proprietarios PATCH ID overflow" file="06 Cenarios de erro/014 proprietarios PATCH ID overflow.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-014: HTTP 400" status="pass" classname="06 Cenarios de erro/014 proprietarios PATCH ID overflow" time="0.030"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/014 proprietarios PATCH ID overflow" time="0.030"/>
+  </testsuite>
+  <testsuite name="NEG-015 proprietarios PATCH ID inexistente" file="06 Cenarios de erro/015 proprietarios PATCH ID inexistente.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-015: HTTP 404" status="pass" classname="06 Cenarios de erro/015 proprietarios PATCH ID inexistente" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/015 proprietarios PATCH ID inexistente" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-016 proprietarios DELETE ID texto" file="06 Cenarios de erro/016 proprietarios DELETE ID texto.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-016: HTTP 400" status="pass" classname="06 Cenarios de erro/016 proprietarios DELETE ID texto" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/016 proprietarios DELETE ID texto" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-017 proprietarios DELETE ID zero" file="06 Cenarios de erro/017 proprietarios DELETE ID zero.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.057">
+    <testcase name="NEG-017: HTTP 400" status="pass" classname="06 Cenarios de erro/017 proprietarios DELETE ID zero" time="0.029"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/017 proprietarios DELETE ID zero" time="0.029"/>
+  </testsuite>
+  <testsuite name="NEG-018 proprietarios DELETE ID negativo" file="06 Cenarios de erro/018 proprietarios DELETE ID negativo.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-018: HTTP 400" status="pass" classname="06 Cenarios de erro/018 proprietarios DELETE ID negativo" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/018 proprietarios DELETE ID negativo" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-019 proprietarios DELETE ID decimal" file="06 Cenarios de erro/019 proprietarios DELETE ID decimal.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-019: HTTP 400" status="pass" classname="06 Cenarios de erro/019 proprietarios DELETE ID decimal" time="0.030"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/019 proprietarios DELETE ID decimal" time="0.030"/>
+  </testsuite>
+  <testsuite name="NEG-020 proprietarios DELETE ID overflow" file="06 Cenarios de erro/020 proprietarios DELETE ID overflow.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.059">
+    <testcase name="NEG-020: HTTP 400" status="pass" classname="06 Cenarios de erro/020 proprietarios DELETE ID overflow" time="0.029"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/020 proprietarios DELETE ID overflow" time="0.029"/>
+  </testsuite>
+  <testsuite name="NEG-021 proprietarios DELETE ID inexistente" file="06 Cenarios de erro/021 proprietarios DELETE ID inexistente.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.059">
+    <testcase name="NEG-021: HTTP 404" status="pass" classname="06 Cenarios de erro/021 proprietarios DELETE ID inexistente" time="0.030"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/021 proprietarios DELETE ID inexistente" time="0.030"/>
+  </testsuite>
+  <testsuite name="NEG-022 veiculos GET ID texto" file="06 Cenarios de erro/022 veiculos GET ID texto.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.060">
+    <testcase name="NEG-022: HTTP 400" status="pass" classname="06 Cenarios de erro/022 veiculos GET ID texto" time="0.030"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/022 veiculos GET ID texto" time="0.030"/>
+  </testsuite>
+  <testsuite name="NEG-023 veiculos GET ID zero" file="06 Cenarios de erro/023 veiculos GET ID zero.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.075">
+    <testcase name="NEG-023: HTTP 400" status="pass" classname="06 Cenarios de erro/023 veiculos GET ID zero" time="0.037"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/023 veiculos GET ID zero" time="0.037"/>
+  </testsuite>
+  <testsuite name="NEG-024 veiculos GET ID negativo" file="06 Cenarios de erro/024 veiculos GET ID negativo.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.060">
+    <testcase name="NEG-024: HTTP 400" status="pass" classname="06 Cenarios de erro/024 veiculos GET ID negativo" time="0.030"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/024 veiculos GET ID negativo" time="0.030"/>
+  </testsuite>
+  <testsuite name="NEG-025 veiculos GET ID decimal" file="06 Cenarios de erro/025 veiculos GET ID decimal.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-025: HTTP 400" status="pass" classname="06 Cenarios de erro/025 veiculos GET ID decimal" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/025 veiculos GET ID decimal" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-026 veiculos GET ID overflow" file="06 Cenarios de erro/026 veiculos GET ID overflow.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.066">
+    <testcase name="NEG-026: HTTP 400" status="pass" classname="06 Cenarios de erro/026 veiculos GET ID overflow" time="0.033"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/026 veiculos GET ID overflow" time="0.033"/>
+  </testsuite>
+  <testsuite name="NEG-027 veiculos GET ID inexistente" file="06 Cenarios de erro/027 veiculos GET ID inexistente.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-027: HTTP 404" status="pass" classname="06 Cenarios de erro/027 veiculos GET ID inexistente" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/027 veiculos GET ID inexistente" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-028 veiculos PATCH ID texto" file="06 Cenarios de erro/028 veiculos PATCH ID texto.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-028: HTTP 400" status="pass" classname="06 Cenarios de erro/028 veiculos PATCH ID texto" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/028 veiculos PATCH ID texto" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-029 veiculos PATCH ID zero" file="06 Cenarios de erro/029 veiculos PATCH ID zero.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-029: HTTP 400" status="pass" classname="06 Cenarios de erro/029 veiculos PATCH ID zero" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/029 veiculos PATCH ID zero" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-030 veiculos PATCH ID negativo" file="06 Cenarios de erro/030 veiculos PATCH ID negativo.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.060">
+    <testcase name="NEG-030: HTTP 400" status="pass" classname="06 Cenarios de erro/030 veiculos PATCH ID negativo" time="0.030"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/030 veiculos PATCH ID negativo" time="0.030"/>
+  </testsuite>
+  <testsuite name="NEG-031 veiculos PATCH ID decimal" file="06 Cenarios de erro/031 veiculos PATCH ID decimal.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.069">
+    <testcase name="NEG-031: HTTP 400" status="pass" classname="06 Cenarios de erro/031 veiculos PATCH ID decimal" time="0.035"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/031 veiculos PATCH ID decimal" time="0.035"/>
+  </testsuite>
+  <testsuite name="NEG-032 veiculos PATCH ID overflow" file="06 Cenarios de erro/032 veiculos PATCH ID overflow.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-032: HTTP 400" status="pass" classname="06 Cenarios de erro/032 veiculos PATCH ID overflow" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/032 veiculos PATCH ID overflow" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-033 veiculos PATCH ID inexistente" file="06 Cenarios de erro/033 veiculos PATCH ID inexistente.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.064">
+    <testcase name="NEG-033: HTTP 404" status="pass" classname="06 Cenarios de erro/033 veiculos PATCH ID inexistente" time="0.032"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/033 veiculos PATCH ID inexistente" time="0.032"/>
+  </testsuite>
+  <testsuite name="NEG-034 veiculos DELETE ID texto" file="06 Cenarios de erro/034 veiculos DELETE ID texto.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-034: HTTP 400" status="pass" classname="06 Cenarios de erro/034 veiculos DELETE ID texto" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/034 veiculos DELETE ID texto" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-035 veiculos DELETE ID zero" file="06 Cenarios de erro/035 veiculos DELETE ID zero.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-035: HTTP 400" status="pass" classname="06 Cenarios de erro/035 veiculos DELETE ID zero" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/035 veiculos DELETE ID zero" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-036 veiculos DELETE ID negativo" file="06 Cenarios de erro/036 veiculos DELETE ID negativo.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-036: HTTP 400" status="pass" classname="06 Cenarios de erro/036 veiculos DELETE ID negativo" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/036 veiculos DELETE ID negativo" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-037 veiculos DELETE ID decimal" file="06 Cenarios de erro/037 veiculos DELETE ID decimal.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-037: HTTP 400" status="pass" classname="06 Cenarios de erro/037 veiculos DELETE ID decimal" time="0.030"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/037 veiculos DELETE ID decimal" time="0.030"/>
+  </testsuite>
+  <testsuite name="NEG-038 veiculos DELETE ID overflow" file="06 Cenarios de erro/038 veiculos DELETE ID overflow.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-038: HTTP 400" status="pass" classname="06 Cenarios de erro/038 veiculos DELETE ID overflow" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/038 veiculos DELETE ID overflow" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-039 veiculos DELETE ID inexistente" file="06 Cenarios de erro/039 veiculos DELETE ID inexistente.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.063">
+    <testcase name="NEG-039: HTTP 404" status="pass" classname="06 Cenarios de erro/039 veiculos DELETE ID inexistente" time="0.032"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/039 veiculos DELETE ID inexistente" time="0.032"/>
+  </testsuite>
+  <testsuite name="NEG-040 historico GET ID texto" file="06 Cenarios de erro/040 historico GET ID texto.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-040: HTTP 400" status="pass" classname="06 Cenarios de erro/040 historico GET ID texto" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/040 historico GET ID texto" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-041 historico GET ID zero" file="06 Cenarios de erro/041 historico GET ID zero.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-041: HTTP 400" status="pass" classname="06 Cenarios de erro/041 historico GET ID zero" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/041 historico GET ID zero" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-042 historico GET ID negativo" file="06 Cenarios de erro/042 historico GET ID negativo.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-042: HTTP 400" status="pass" classname="06 Cenarios de erro/042 historico GET ID negativo" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/042 historico GET ID negativo" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-043 historico GET ID decimal" file="06 Cenarios de erro/043 historico GET ID decimal.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-043: HTTP 400" status="pass" classname="06 Cenarios de erro/043 historico GET ID decimal" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/043 historico GET ID decimal" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-044 historico GET ID overflow" file="06 Cenarios de erro/044 historico GET ID overflow.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-044: HTTP 400" status="pass" classname="06 Cenarios de erro/044 historico GET ID overflow" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/044 historico GET ID overflow" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-045 historico GET ID inexistente" file="06 Cenarios de erro/045 historico GET ID inexistente.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.063">
+    <testcase name="NEG-045: HTTP 404" status="pass" classname="06 Cenarios de erro/045 historico GET ID inexistente" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/045 historico GET ID inexistente" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-046 log-proprietarios GET ID texto" file="06 Cenarios de erro/046 log-proprietarios GET ID texto.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.083">
+    <testcase name="NEG-046: HTTP 400" status="pass" classname="06 Cenarios de erro/046 log-proprietarios GET ID texto" time="0.041"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/046 log-proprietarios GET ID texto" time="0.041"/>
+  </testsuite>
+  <testsuite name="NEG-047 log-proprietarios GET ID zero" file="06 Cenarios de erro/047 log-proprietarios GET ID zero.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-047: HTTP 400" status="pass" classname="06 Cenarios de erro/047 log-proprietarios GET ID zero" time="0.030"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/047 log-proprietarios GET ID zero" time="0.030"/>
+  </testsuite>
+  <testsuite name="NEG-048 log-proprietarios GET ID negativo" file="06 Cenarios de erro/048 log-proprietarios GET ID negativo.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.060">
+    <testcase name="NEG-048: HTTP 400" status="pass" classname="06 Cenarios de erro/048 log-proprietarios GET ID negativo" time="0.030"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/048 log-proprietarios GET ID negativo" time="0.030"/>
+  </testsuite>
+  <testsuite name="NEG-049 log-proprietarios GET ID decimal" file="06 Cenarios de erro/049 log-proprietarios GET ID decimal.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-049: HTTP 400" status="pass" classname="06 Cenarios de erro/049 log-proprietarios GET ID decimal" time="0.030"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/049 log-proprietarios GET ID decimal" time="0.030"/>
+  </testsuite>
+  <testsuite name="NEG-050 log-proprietarios GET ID overflow" file="06 Cenarios de erro/050 log-proprietarios GET ID overflow.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-050: HTTP 400" status="pass" classname="06 Cenarios de erro/050 log-proprietarios GET ID overflow" time="0.030"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/050 log-proprietarios GET ID overflow" time="0.030"/>
+  </testsuite>
+  <testsuite name="NEG-051 log-proprietarios GET ID inexistente" file="06 Cenarios de erro/051 log-proprietarios GET ID inexistente.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-051: HTTP 404" status="pass" classname="06 Cenarios de erro/051 log-proprietarios GET ID inexistente" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/051 log-proprietarios GET ID inexistente" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-052 proprietario POST cpfCnpj nulo" file="06 Cenarios de erro/052 proprietario POST cpfCnpj nulo.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-052: HTTP 400" status="pass" classname="06 Cenarios de erro/052 proprietario POST cpfCnpj nulo" time="0.020"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/052 proprietario POST cpfCnpj nulo" time="0.020"/>
+    <testcase name="Campo rejeitado: cpfCnpj" status="pass" classname="06 Cenarios de erro/052 proprietario POST cpfCnpj nulo" time="0.020"/>
+  </testsuite>
+  <testsuite name="NEG-053 proprietario POST cpfCnpj vazio" file="06 Cenarios de erro/053 proprietario POST cpfCnpj vazio.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-053: HTTP 400" status="pass" classname="06 Cenarios de erro/053 proprietario POST cpfCnpj vazio" time="0.020"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/053 proprietario POST cpfCnpj vazio" time="0.020"/>
+    <testcase name="Campo rejeitado: cpfCnpj" status="pass" classname="06 Cenarios de erro/053 proprietario POST cpfCnpj vazio" time="0.020"/>
+  </testsuite>
+  <testsuite name="NEG-054 proprietario POST cpfCnpj branco" file="06 Cenarios de erro/054 proprietario POST cpfCnpj branco.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-054: HTTP 400" status="pass" classname="06 Cenarios de erro/054 proprietario POST cpfCnpj branco" time="0.020"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/054 proprietario POST cpfCnpj branco" time="0.020"/>
+    <testcase name="Campo rejeitado: cpfCnpj" status="pass" classname="06 Cenarios de erro/054 proprietario POST cpfCnpj branco" time="0.020"/>
+  </testsuite>
+  <testsuite name="NEG-055 proprietario POST cpfCnpj ausente" file="06 Cenarios de erro/055 proprietario POST cpfCnpj ausente.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.060">
+    <testcase name="NEG-055: HTTP 400" status="pass" classname="06 Cenarios de erro/055 proprietario POST cpfCnpj ausente" time="0.020"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/055 proprietario POST cpfCnpj ausente" time="0.020"/>
+    <testcase name="Campo rejeitado: cpfCnpj" status="pass" classname="06 Cenarios de erro/055 proprietario POST cpfCnpj ausente" time="0.020"/>
+  </testsuite>
+  <testsuite name="NEG-056 proprietario POST nome nulo" file="06 Cenarios de erro/056 proprietario POST nome nulo.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.070">
+    <testcase name="NEG-056: HTTP 400" status="pass" classname="06 Cenarios de erro/056 proprietario POST nome nulo" time="0.023"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/056 proprietario POST nome nulo" time="0.023"/>
+    <testcase name="Campo rejeitado: nome" status="pass" classname="06 Cenarios de erro/056 proprietario POST nome nulo" time="0.023"/>
+  </testsuite>
+  <testsuite name="NEG-057 proprietario POST nome vazio" file="06 Cenarios de erro/057 proprietario POST nome vazio.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.067">
+    <testcase name="NEG-057: HTTP 400" status="pass" classname="06 Cenarios de erro/057 proprietario POST nome vazio" time="0.022"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/057 proprietario POST nome vazio" time="0.022"/>
+    <testcase name="Campo rejeitado: nome" status="pass" classname="06 Cenarios de erro/057 proprietario POST nome vazio" time="0.022"/>
+  </testsuite>
+  <testsuite name="NEG-058 proprietario POST nome branco" file="06 Cenarios de erro/058 proprietario POST nome branco.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.084">
+    <testcase name="NEG-058: HTTP 400" status="pass" classname="06 Cenarios de erro/058 proprietario POST nome branco" time="0.028"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/058 proprietario POST nome branco" time="0.028"/>
+    <testcase name="Campo rejeitado: nome" status="pass" classname="06 Cenarios de erro/058 proprietario POST nome branco" time="0.028"/>
+  </testsuite>
+  <testsuite name="NEG-059 proprietario POST nome ausente" file="06 Cenarios de erro/059 proprietario POST nome ausente.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.074">
+    <testcase name="NEG-059: HTTP 400" status="pass" classname="06 Cenarios de erro/059 proprietario POST nome ausente" time="0.025"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/059 proprietario POST nome ausente" time="0.025"/>
+    <testcase name="Campo rejeitado: nome" status="pass" classname="06 Cenarios de erro/059 proprietario POST nome ausente" time="0.025"/>
+  </testsuite>
+  <testsuite name="NEG-060 proprietario POST cpfCnpj repetido" file="06 Cenarios de erro/060 proprietario POST cpfCnpj repetido.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.070">
+    <testcase name="NEG-060: HTTP 400" status="pass" classname="06 Cenarios de erro/060 proprietario POST cpfCnpj repetido" time="0.023"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/060 proprietario POST cpfCnpj repetido" time="0.023"/>
+    <testcase name="Campo rejeitado: cpfCnpj" status="pass" classname="06 Cenarios de erro/060 proprietario POST cpfCnpj repetido" time="0.023"/>
+  </testsuite>
+  <testsuite name="NEG-061 proprietario POST cpfCnpj digito invalido" file="06 Cenarios de erro/061 proprietario POST cpfCnpj digito invalido.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.065">
+    <testcase name="NEG-061: HTTP 400" status="pass" classname="06 Cenarios de erro/061 proprietario POST cpfCnpj digito invalido" time="0.022"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/061 proprietario POST cpfCnpj digito invalido" time="0.022"/>
+    <testcase name="Campo rejeitado: cpfCnpj" status="pass" classname="06 Cenarios de erro/061 proprietario POST cpfCnpj digito invalido" time="0.022"/>
+  </testsuite>
+  <testsuite name="NEG-062 proprietario POST cpfCnpj CNPJ invalido" file="06 Cenarios de erro/062 proprietario POST cpfCnpj CNPJ invalido.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.065">
+    <testcase name="NEG-062: HTTP 400" status="pass" classname="06 Cenarios de erro/062 proprietario POST cpfCnpj CNPJ invalido" time="0.022"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/062 proprietario POST cpfCnpj CNPJ invalido" time="0.022"/>
+    <testcase name="Campo rejeitado: cpfCnpj" status="pass" classname="06 Cenarios de erro/062 proprietario POST cpfCnpj CNPJ invalido" time="0.022"/>
+  </testsuite>
+  <testsuite name="NEG-063 proprietario POST cep curto" file="06 Cenarios de erro/063 proprietario POST cep curto.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.064">
+    <testcase name="NEG-063: HTTP 400" status="pass" classname="06 Cenarios de erro/063 proprietario POST cep curto" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/063 proprietario POST cep curto" time="0.021"/>
+    <testcase name="Campo rejeitado: cep" status="pass" classname="06 Cenarios de erro/063 proprietario POST cep curto" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-064 proprietario POST cep letras" file="06 Cenarios de erro/064 proprietario POST cep letras.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.064">
+    <testcase name="NEG-064: HTTP 400" status="pass" classname="06 Cenarios de erro/064 proprietario POST cep letras" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/064 proprietario POST cep letras" time="0.021"/>
+    <testcase name="Campo rejeitado: cep" status="pass" classname="06 Cenarios de erro/064 proprietario POST cep letras" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-065 proprietario POST estado longo" file="06 Cenarios de erro/065 proprietario POST estado longo.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.064">
+    <testcase name="NEG-065: HTTP 400" status="pass" classname="06 Cenarios de erro/065 proprietario POST estado longo" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/065 proprietario POST estado longo" time="0.021"/>
+    <testcase name="Campo rejeitado: estado" status="pass" classname="06 Cenarios de erro/065 proprietario POST estado longo" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-066 proprietario POST estado numero" file="06 Cenarios de erro/066 proprietario POST estado numero.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.066">
+    <testcase name="NEG-066: HTTP 400" status="pass" classname="06 Cenarios de erro/066 proprietario POST estado numero" time="0.022"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/066 proprietario POST estado numero" time="0.022"/>
+    <testcase name="Campo rejeitado: estado" status="pass" classname="06 Cenarios de erro/066 proprietario POST estado numero" time="0.022"/>
+  </testsuite>
+  <testsuite name="NEG-067 proprietario POST nome excedido" file="06 Cenarios de erro/067 proprietario POST nome excedido.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-067: HTTP 400" status="pass" classname="06 Cenarios de erro/067 proprietario POST nome excedido" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/067 proprietario POST nome excedido" time="0.021"/>
+    <testcase name="Campo rejeitado: nome" status="pass" classname="06 Cenarios de erro/067 proprietario POST nome excedido" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-068 proprietario POST rua excedido" file="06 Cenarios de erro/068 proprietario POST rua excedido.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.071">
+    <testcase name="NEG-068: HTTP 400" status="pass" classname="06 Cenarios de erro/068 proprietario POST rua excedido" time="0.024"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/068 proprietario POST rua excedido" time="0.024"/>
+    <testcase name="Campo rejeitado: rua" status="pass" classname="06 Cenarios de erro/068 proprietario POST rua excedido" time="0.024"/>
+  </testsuite>
+  <testsuite name="NEG-069 proprietario POST numero excedido" file="06 Cenarios de erro/069 proprietario POST numero excedido.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-069: HTTP 400" status="pass" classname="06 Cenarios de erro/069 proprietario POST numero excedido" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/069 proprietario POST numero excedido" time="0.021"/>
+    <testcase name="Campo rejeitado: numero" status="pass" classname="06 Cenarios de erro/069 proprietario POST numero excedido" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-070 proprietario POST cidade excedido" file="06 Cenarios de erro/070 proprietario POST cidade excedido.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.063">
+    <testcase name="NEG-070: HTTP 400" status="pass" classname="06 Cenarios de erro/070 proprietario POST cidade excedido" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/070 proprietario POST cidade excedido" time="0.021"/>
+    <testcase name="Campo rejeitado: cidade" status="pass" classname="06 Cenarios de erro/070 proprietario POST cidade excedido" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-071 proprietario POST complemento excedido" file="06 Cenarios de erro/071 proprietario POST complemento excedido.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.063">
+    <testcase name="NEG-071: HTTP 400" status="pass" classname="06 Cenarios de erro/071 proprietario POST complemento excedido" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/071 proprietario POST complemento excedido" time="0.021"/>
+    <testcase name="Campo rejeitado: complemento" status="pass" classname="06 Cenarios de erro/071 proprietario POST complemento excedido" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-072 proprietario PATCH cpfCnpj repetido" file="06 Cenarios de erro/072 proprietario PATCH cpfCnpj repetido.bru" errors="0" failures="1" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.064">
+    <testcase name="Campo rejeitado: cpfCnpj" status="fail" classname="06 Cenarios de erro/072 proprietario PATCH cpfCnpj repetido" time="0.021">
+      <failure type="failure" message="expected false to equal true"/>
+    </testcase>
+    <testcase name="NEG-072: HTTP 400" status="pass" classname="06 Cenarios de erro/072 proprietario PATCH cpfCnpj repetido" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/072 proprietario PATCH cpfCnpj repetido" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-073 proprietario PATCH cpfCnpj digito invalido" file="06 Cenarios de erro/073 proprietario PATCH cpfCnpj digito invalido.bru" errors="0" failures="1" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.063">
+    <testcase name="Campo rejeitado: cpfCnpj" status="fail" classname="06 Cenarios de erro/073 proprietario PATCH cpfCnpj digito invalido" time="0.021">
+      <failure type="failure" message="expected false to equal true"/>
+    </testcase>
+    <testcase name="NEG-073: HTTP 400" status="pass" classname="06 Cenarios de erro/073 proprietario PATCH cpfCnpj digito invalido" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/073 proprietario PATCH cpfCnpj digito invalido" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-074 proprietario PATCH cpfCnpj CNPJ invalido" file="06 Cenarios de erro/074 proprietario PATCH cpfCnpj CNPJ invalido.bru" errors="0" failures="1" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="Campo rejeitado: cpfCnpj" status="fail" classname="06 Cenarios de erro/074 proprietario PATCH cpfCnpj CNPJ invalido" time="0.021">
+      <failure type="failure" message="expected false to equal true"/>
+    </testcase>
+    <testcase name="NEG-074: HTTP 400" status="pass" classname="06 Cenarios de erro/074 proprietario PATCH cpfCnpj CNPJ invalido" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/074 proprietario PATCH cpfCnpj CNPJ invalido" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-075 proprietario PATCH cep curto" file="06 Cenarios de erro/075 proprietario PATCH cep curto.bru" errors="0" failures="1" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="Campo rejeitado: cep" status="fail" classname="06 Cenarios de erro/075 proprietario PATCH cep curto" time="0.021">
+      <failure type="failure" message="expected false to equal true"/>
+    </testcase>
+    <testcase name="NEG-075: HTTP 400" status="pass" classname="06 Cenarios de erro/075 proprietario PATCH cep curto" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/075 proprietario PATCH cep curto" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-076 proprietario PATCH cep letras" file="06 Cenarios de erro/076 proprietario PATCH cep letras.bru" errors="0" failures="1" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.066">
+    <testcase name="Campo rejeitado: cep" status="fail" classname="06 Cenarios de erro/076 proprietario PATCH cep letras" time="0.022">
+      <failure type="failure" message="expected false to equal true"/>
+    </testcase>
+    <testcase name="NEG-076: HTTP 400" status="pass" classname="06 Cenarios de erro/076 proprietario PATCH cep letras" time="0.022"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/076 proprietario PATCH cep letras" time="0.022"/>
+  </testsuite>
+  <testsuite name="NEG-077 proprietario PATCH estado longo" file="06 Cenarios de erro/077 proprietario PATCH estado longo.bru" errors="0" failures="1" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="Campo rejeitado: estado" status="fail" classname="06 Cenarios de erro/077 proprietario PATCH estado longo" time="0.021">
+      <failure type="failure" message="expected false to equal true"/>
+    </testcase>
+    <testcase name="NEG-077: HTTP 400" status="pass" classname="06 Cenarios de erro/077 proprietario PATCH estado longo" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/077 proprietario PATCH estado longo" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-078 proprietario PATCH estado numero" file="06 Cenarios de erro/078 proprietario PATCH estado numero.bru" errors="0" failures="1" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.067">
+    <testcase name="Campo rejeitado: estado" status="fail" classname="06 Cenarios de erro/078 proprietario PATCH estado numero" time="0.022">
+      <failure type="failure" message="expected false to equal true"/>
+    </testcase>
+    <testcase name="NEG-078: HTTP 400" status="pass" classname="06 Cenarios de erro/078 proprietario PATCH estado numero" time="0.022"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/078 proprietario PATCH estado numero" time="0.022"/>
+  </testsuite>
+  <testsuite name="NEG-079 proprietario PATCH nome excedido" file="06 Cenarios de erro/079 proprietario PATCH nome excedido.bru" errors="0" failures="1" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.070">
+    <testcase name="Campo rejeitado: nome" status="fail" classname="06 Cenarios de erro/079 proprietario PATCH nome excedido" time="0.023">
+      <failure type="failure" message="expected false to equal true"/>
+    </testcase>
+    <testcase name="NEG-079: HTTP 400" status="pass" classname="06 Cenarios de erro/079 proprietario PATCH nome excedido" time="0.023"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/079 proprietario PATCH nome excedido" time="0.023"/>
+  </testsuite>
+  <testsuite name="NEG-080 proprietario PATCH rua excedido" file="06 Cenarios de erro/080 proprietario PATCH rua excedido.bru" errors="0" failures="1" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="Campo rejeitado: rua" status="fail" classname="06 Cenarios de erro/080 proprietario PATCH rua excedido" time="0.021">
+      <failure type="failure" message="expected false to equal true"/>
+    </testcase>
+    <testcase name="NEG-080: HTTP 400" status="pass" classname="06 Cenarios de erro/080 proprietario PATCH rua excedido" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/080 proprietario PATCH rua excedido" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-081 proprietario PATCH numero excedido" file="06 Cenarios de erro/081 proprietario PATCH numero excedido.bru" errors="0" failures="1" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.063">
+    <testcase name="Campo rejeitado: numero" status="fail" classname="06 Cenarios de erro/081 proprietario PATCH numero excedido" time="0.021">
+      <failure type="failure" message="expected false to equal true"/>
+    </testcase>
+    <testcase name="NEG-081: HTTP 400" status="pass" classname="06 Cenarios de erro/081 proprietario PATCH numero excedido" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/081 proprietario PATCH numero excedido" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-082 proprietario PATCH cidade excedido" file="06 Cenarios de erro/082 proprietario PATCH cidade excedido.bru" errors="0" failures="1" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.071">
+    <testcase name="Campo rejeitado: cidade" status="fail" classname="06 Cenarios de erro/082 proprietario PATCH cidade excedido" time="0.024">
+      <failure type="failure" message="expected false to equal true"/>
+    </testcase>
+    <testcase name="NEG-082: HTTP 400" status="pass" classname="06 Cenarios de erro/082 proprietario PATCH cidade excedido" time="0.024"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/082 proprietario PATCH cidade excedido" time="0.024"/>
+  </testsuite>
+  <testsuite name="NEG-083 proprietario PATCH complemento excedido" file="06 Cenarios de erro/083 proprietario PATCH complemento excedido.bru" errors="0" failures="1" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.060">
+    <testcase name="Campo rejeitado: complemento" status="fail" classname="06 Cenarios de erro/083 proprietario PATCH complemento excedido" time="0.020">
+      <failure type="failure" message="expected false to equal true"/>
+    </testcase>
+    <testcase name="NEG-083: HTTP 400" status="pass" classname="06 Cenarios de erro/083 proprietario PATCH complemento excedido" time="0.020"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/083 proprietario PATCH complemento excedido" time="0.020"/>
+  </testsuite>
+  <testsuite name="NEG-084 proprietario PATCH nome branco" file="06 Cenarios de erro/084 proprietario PATCH nome branco.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-084: HTTP 400" status="pass" classname="06 Cenarios de erro/084 proprietario PATCH nome branco" time="0.030"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/084 proprietario PATCH nome branco" time="0.030"/>
+  </testsuite>
+  <testsuite name="NEG-085 proprietario PATCH rua branco" file="06 Cenarios de erro/085 proprietario PATCH rua branco.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-085: HTTP 400" status="pass" classname="06 Cenarios de erro/085 proprietario PATCH rua branco" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/085 proprietario PATCH rua branco" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-086 proprietario PATCH numero branco" file="06 Cenarios de erro/086 proprietario PATCH numero branco.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-086: HTTP 400" status="pass" classname="06 Cenarios de erro/086 proprietario PATCH numero branco" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/086 proprietario PATCH numero branco" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-087 proprietario PATCH cep branco" file="06 Cenarios de erro/087 proprietario PATCH cep branco.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.064">
+    <testcase name="NEG-087: HTTP 400" status="pass" classname="06 Cenarios de erro/087 proprietario PATCH cep branco" time="0.032"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/087 proprietario PATCH cep branco" time="0.032"/>
+  </testsuite>
+  <testsuite name="NEG-088 proprietario PATCH cidade branco" file="06 Cenarios de erro/088 proprietario PATCH cidade branco.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.064">
+    <testcase name="NEG-088: HTTP 400" status="pass" classname="06 Cenarios de erro/088 proprietario PATCH cidade branco" time="0.032"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/088 proprietario PATCH cidade branco" time="0.032"/>
+  </testsuite>
+  <testsuite name="NEG-089 proprietario PATCH estado branco" file="06 Cenarios de erro/089 proprietario PATCH estado branco.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.060">
+    <testcase name="NEG-089: HTTP 400" status="pass" classname="06 Cenarios de erro/089 proprietario PATCH estado branco" time="0.030"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/089 proprietario PATCH estado branco" time="0.030"/>
+  </testsuite>
+  <testsuite name="NEG-090 proprietario PATCH complemento branco" file="06 Cenarios de erro/090 proprietario PATCH complemento branco.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-090: HTTP 400" status="pass" classname="06 Cenarios de erro/090 proprietario PATCH complemento branco" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/090 proprietario PATCH complemento branco" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-091 proprietario PATCH cpfCnpj branco" file="06 Cenarios de erro/091 proprietario PATCH cpfCnpj branco.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-091: HTTP 400" status="pass" classname="06 Cenarios de erro/091 proprietario PATCH cpfCnpj branco" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/091 proprietario PATCH cpfCnpj branco" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-092 proprietario CPF duplicado" file="06 Cenarios de erro/092 proprietario CPF duplicado.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.066">
+    <testcase name="NEG-092: HTTP 409" status="pass" classname="06 Cenarios de erro/092 proprietario CPF duplicado" time="0.033"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/092 proprietario CPF duplicado" time="0.033"/>
+  </testsuite>
+  <testsuite name="NEG-093 proprietario CPF imutavel" file="06 Cenarios de erro/093 proprietario CPF imutavel.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.123">
+    <testcase name="NEG-093: HTTP 400" status="pass" classname="06 Cenarios de erro/093 proprietario CPF imutavel" time="0.062"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/093 proprietario CPF imutavel" time="0.062"/>
+  </testsuite>
+  <testsuite name="NEG-094 veiculo POST tipo nulo" file="06 Cenarios de erro/094 veiculo POST tipo nulo.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-094: HTTP 400" status="pass" classname="06 Cenarios de erro/094 veiculo POST tipo nulo" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/094 veiculo POST tipo nulo" time="0.021"/>
+    <testcase name="Campo rejeitado: tipo" status="pass" classname="06 Cenarios de erro/094 veiculo POST tipo nulo" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-095 veiculo POST tipo ausente" file="06 Cenarios de erro/095 veiculo POST tipo ausente.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-095: HTTP 400" status="pass" classname="06 Cenarios de erro/095 veiculo POST tipo ausente" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/095 veiculo POST tipo ausente" time="0.021"/>
+    <testcase name="Campo rejeitado: tipo" status="pass" classname="06 Cenarios de erro/095 veiculo POST tipo ausente" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-096 veiculo POST tipo vazio" file="06 Cenarios de erro/096 veiculo POST tipo vazio.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.060">
+    <testcase name="NEG-096: HTTP 400" status="pass" classname="06 Cenarios de erro/096 veiculo POST tipo vazio" time="0.020"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/096 veiculo POST tipo vazio" time="0.020"/>
+    <testcase name="Campo rejeitado: tipo" status="pass" classname="06 Cenarios de erro/096 veiculo POST tipo vazio" time="0.020"/>
+  </testsuite>
+  <testsuite name="NEG-097 veiculo POST tipo branco" file="06 Cenarios de erro/097 veiculo POST tipo branco.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-097: HTTP 400" status="pass" classname="06 Cenarios de erro/097 veiculo POST tipo branco" time="0.020"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/097 veiculo POST tipo branco" time="0.020"/>
+    <testcase name="Campo rejeitado: tipo" status="pass" classname="06 Cenarios de erro/097 veiculo POST tipo branco" time="0.020"/>
+  </testsuite>
+  <testsuite name="NEG-098 veiculo POST idProprietario nulo" file="06 Cenarios de erro/098 veiculo POST idProprietario nulo.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-098: HTTP 400" status="pass" classname="06 Cenarios de erro/098 veiculo POST idProprietario nulo" time="0.020"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/098 veiculo POST idProprietario nulo" time="0.020"/>
+    <testcase name="Campo rejeitado: idProprietario" status="pass" classname="06 Cenarios de erro/098 veiculo POST idProprietario nulo" time="0.020"/>
+  </testsuite>
+  <testsuite name="NEG-099 veiculo POST idProprietario ausente" file="06 Cenarios de erro/099 veiculo POST idProprietario ausente.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.066">
+    <testcase name="NEG-099: HTTP 400" status="pass" classname="06 Cenarios de erro/099 veiculo POST idProprietario ausente" time="0.022"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/099 veiculo POST idProprietario ausente" time="0.022"/>
+    <testcase name="Campo rejeitado: idProprietario" status="pass" classname="06 Cenarios de erro/099 veiculo POST idProprietario ausente" time="0.022"/>
+  </testsuite>
+  <testsuite name="NEG-100 veiculo POST anoFabricacao nulo" file="06 Cenarios de erro/100 veiculo POST anoFabricacao nulo.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-100: HTTP 400" status="pass" classname="06 Cenarios de erro/100 veiculo POST anoFabricacao nulo" time="0.020"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/100 veiculo POST anoFabricacao nulo" time="0.020"/>
+    <testcase name="Campo rejeitado: anoFabricacao" status="pass" classname="06 Cenarios de erro/100 veiculo POST anoFabricacao nulo" time="0.020"/>
+  </testsuite>
+  <testsuite name="NEG-101 veiculo POST anoFabricacao ausente" file="06 Cenarios de erro/101 veiculo POST anoFabricacao ausente.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.063">
+    <testcase name="NEG-101: HTTP 400" status="pass" classname="06 Cenarios de erro/101 veiculo POST anoFabricacao ausente" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/101 veiculo POST anoFabricacao ausente" time="0.021"/>
+    <testcase name="Campo rejeitado: anoFabricacao" status="pass" classname="06 Cenarios de erro/101 veiculo POST anoFabricacao ausente" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-102 veiculo POST chassi nulo" file="06 Cenarios de erro/102 veiculo POST chassi nulo.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.064">
+    <testcase name="NEG-102: HTTP 400" status="pass" classname="06 Cenarios de erro/102 veiculo POST chassi nulo" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/102 veiculo POST chassi nulo" time="0.021"/>
+    <testcase name="Campo rejeitado: chassi" status="pass" classname="06 Cenarios de erro/102 veiculo POST chassi nulo" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-103 veiculo POST chassi ausente" file="06 Cenarios de erro/103 veiculo POST chassi ausente.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-103: HTTP 400" status="pass" classname="06 Cenarios de erro/103 veiculo POST chassi ausente" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/103 veiculo POST chassi ausente" time="0.021"/>
+    <testcase name="Campo rejeitado: chassi" status="pass" classname="06 Cenarios de erro/103 veiculo POST chassi ausente" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-104 veiculo POST chassi vazio" file="06 Cenarios de erro/104 veiculo POST chassi vazio.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-104: HTTP 400" status="pass" classname="06 Cenarios de erro/104 veiculo POST chassi vazio" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/104 veiculo POST chassi vazio" time="0.021"/>
+    <testcase name="Campo rejeitado: chassi" status="pass" classname="06 Cenarios de erro/104 veiculo POST chassi vazio" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-105 veiculo POST chassi branco" file="06 Cenarios de erro/105 veiculo POST chassi branco.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.063">
+    <testcase name="NEG-105: HTTP 400" status="pass" classname="06 Cenarios de erro/105 veiculo POST chassi branco" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/105 veiculo POST chassi branco" time="0.021"/>
+    <testcase name="Campo rejeitado: chassi" status="pass" classname="06 Cenarios de erro/105 veiculo POST chassi branco" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-106 veiculo POST renavam nulo" file="06 Cenarios de erro/106 veiculo POST renavam nulo.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.063">
+    <testcase name="NEG-106: HTTP 400" status="pass" classname="06 Cenarios de erro/106 veiculo POST renavam nulo" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/106 veiculo POST renavam nulo" time="0.021"/>
+    <testcase name="Campo rejeitado: renavam" status="pass" classname="06 Cenarios de erro/106 veiculo POST renavam nulo" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-107 veiculo POST renavam ausente" file="06 Cenarios de erro/107 veiculo POST renavam ausente.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.060">
+    <testcase name="NEG-107: HTTP 400" status="pass" classname="06 Cenarios de erro/107 veiculo POST renavam ausente" time="0.020"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/107 veiculo POST renavam ausente" time="0.020"/>
+    <testcase name="Campo rejeitado: renavam" status="pass" classname="06 Cenarios de erro/107 veiculo POST renavam ausente" time="0.020"/>
+  </testsuite>
+  <testsuite name="NEG-108 veiculo POST renavam vazio" file="06 Cenarios de erro/108 veiculo POST renavam vazio.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.060">
+    <testcase name="NEG-108: HTTP 400" status="pass" classname="06 Cenarios de erro/108 veiculo POST renavam vazio" time="0.020"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/108 veiculo POST renavam vazio" time="0.020"/>
+    <testcase name="Campo rejeitado: renavam" status="pass" classname="06 Cenarios de erro/108 veiculo POST renavam vazio" time="0.020"/>
+  </testsuite>
+  <testsuite name="NEG-109 veiculo POST renavam branco" file="06 Cenarios de erro/109 veiculo POST renavam branco.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-109: HTTP 400" status="pass" classname="06 Cenarios de erro/109 veiculo POST renavam branco" time="0.020"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/109 veiculo POST renavam branco" time="0.020"/>
+    <testcase name="Campo rejeitado: renavam" status="pass" classname="06 Cenarios de erro/109 veiculo POST renavam branco" time="0.020"/>
+  </testsuite>
+  <testsuite name="NEG-110 veiculo POST placa nulo" file="06 Cenarios de erro/110 veiculo POST placa nulo.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-110: HTTP 400" status="pass" classname="06 Cenarios de erro/110 veiculo POST placa nulo" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/110 veiculo POST placa nulo" time="0.021"/>
+    <testcase name="Campo rejeitado: placa" status="pass" classname="06 Cenarios de erro/110 veiculo POST placa nulo" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-111 veiculo POST placa ausente" file="06 Cenarios de erro/111 veiculo POST placa ausente.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-111: HTTP 400" status="pass" classname="06 Cenarios de erro/111 veiculo POST placa ausente" time="0.020"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/111 veiculo POST placa ausente" time="0.020"/>
+    <testcase name="Campo rejeitado: placa" status="pass" classname="06 Cenarios de erro/111 veiculo POST placa ausente" time="0.020"/>
+  </testsuite>
+  <testsuite name="NEG-112 veiculo POST placa vazio" file="06 Cenarios de erro/112 veiculo POST placa vazio.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-112: HTTP 400" status="pass" classname="06 Cenarios de erro/112 veiculo POST placa vazio" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/112 veiculo POST placa vazio" time="0.021"/>
+    <testcase name="Campo rejeitado: placa" status="pass" classname="06 Cenarios de erro/112 veiculo POST placa vazio" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-113 veiculo POST placa branco" file="06 Cenarios de erro/113 veiculo POST placa branco.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-113: HTTP 400" status="pass" classname="06 Cenarios de erro/113 veiculo POST placa branco" time="0.020"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/113 veiculo POST placa branco" time="0.020"/>
+    <testcase name="Campo rejeitado: placa" status="pass" classname="06 Cenarios de erro/113 veiculo POST placa branco" time="0.020"/>
+  </testsuite>
+  <testsuite name="NEG-114 veiculo POST tipo invalido" file="06 Cenarios de erro/114 veiculo POST tipo invalido.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-114: HTTP 400" status="pass" classname="06 Cenarios de erro/114 veiculo POST tipo invalido" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/114 veiculo POST tipo invalido" time="0.021"/>
+    <testcase name="Campo rejeitado: tipo" status="pass" classname="06 Cenarios de erro/114 veiculo POST tipo invalido" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-115 veiculo POST idProprietario zero" file="06 Cenarios de erro/115 veiculo POST idProprietario zero.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-115: HTTP 400" status="pass" classname="06 Cenarios de erro/115 veiculo POST idProprietario zero" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/115 veiculo POST idProprietario zero" time="0.021"/>
+    <testcase name="Campo rejeitado: idProprietario" status="pass" classname="06 Cenarios de erro/115 veiculo POST idProprietario zero" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-116 veiculo POST idProprietario negativo" file="06 Cenarios de erro/116 veiculo POST idProprietario negativo.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-116: HTTP 400" status="pass" classname="06 Cenarios de erro/116 veiculo POST idProprietario negativo" time="0.020"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/116 veiculo POST idProprietario negativo" time="0.020"/>
+    <testcase name="Campo rejeitado: idProprietario" status="pass" classname="06 Cenarios de erro/116 veiculo POST idProprietario negativo" time="0.020"/>
+  </testsuite>
+  <testsuite name="NEG-117 veiculo POST idProprietario texto" file="06 Cenarios de erro/117 veiculo POST idProprietario texto.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.064">
+    <testcase name="NEG-117: HTTP 400" status="pass" classname="06 Cenarios de erro/117 veiculo POST idProprietario texto" time="0.032"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/117 veiculo POST idProprietario texto" time="0.032"/>
+  </testsuite>
+  <testsuite name="NEG-118 veiculo POST idProprietario overflow" file="06 Cenarios de erro/118 veiculo POST idProprietario overflow.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-118: HTTP 400" status="pass" classname="06 Cenarios de erro/118 veiculo POST idProprietario overflow" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/118 veiculo POST idProprietario overflow" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-119 veiculo POST anoFabricacao zero" file="06 Cenarios de erro/119 veiculo POST anoFabricacao zero.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-119: HTTP 400" status="pass" classname="06 Cenarios de erro/119 veiculo POST anoFabricacao zero" time="0.020"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/119 veiculo POST anoFabricacao zero" time="0.020"/>
+    <testcase name="Campo rejeitado: anoFabricacao" status="pass" classname="06 Cenarios de erro/119 veiculo POST anoFabricacao zero" time="0.020"/>
+  </testsuite>
+  <testsuite name="NEG-120 veiculo POST anoFabricacao negativo" file="06 Cenarios de erro/120 veiculo POST anoFabricacao negativo.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-120: HTTP 400" status="pass" classname="06 Cenarios de erro/120 veiculo POST anoFabricacao negativo" time="0.020"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/120 veiculo POST anoFabricacao negativo" time="0.020"/>
+    <testcase name="Campo rejeitado: anoFabricacao" status="pass" classname="06 Cenarios de erro/120 veiculo POST anoFabricacao negativo" time="0.020"/>
+  </testsuite>
+  <testsuite name="NEG-121 veiculo POST anoFabricacao texto" file="06 Cenarios de erro/121 veiculo POST anoFabricacao texto.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-121: HTTP 400" status="pass" classname="06 Cenarios de erro/121 veiculo POST anoFabricacao texto" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/121 veiculo POST anoFabricacao texto" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-122 veiculo POST anoFabricacao overflow" file="06 Cenarios de erro/122 veiculo POST anoFabricacao overflow.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.076">
+    <testcase name="NEG-122: HTTP 400" status="pass" classname="06 Cenarios de erro/122 veiculo POST anoFabricacao overflow" time="0.038"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/122 veiculo POST anoFabricacao overflow" time="0.038"/>
+  </testsuite>
+  <testsuite name="NEG-123 veiculo POST chassi excedido" file="06 Cenarios de erro/123 veiculo POST chassi excedido.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.067">
+    <testcase name="NEG-123: HTTP 400" status="pass" classname="06 Cenarios de erro/123 veiculo POST chassi excedido" time="0.022"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/123 veiculo POST chassi excedido" time="0.022"/>
+    <testcase name="Campo rejeitado: chassi" status="pass" classname="06 Cenarios de erro/123 veiculo POST chassi excedido" time="0.022"/>
+  </testsuite>
+  <testsuite name="NEG-124 veiculo POST renavam excedido" file="06 Cenarios de erro/124 veiculo POST renavam excedido.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.071">
+    <testcase name="NEG-124: HTTP 400" status="pass" classname="06 Cenarios de erro/124 veiculo POST renavam excedido" time="0.024"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/124 veiculo POST renavam excedido" time="0.024"/>
+    <testcase name="Campo rejeitado: renavam" status="pass" classname="06 Cenarios de erro/124 veiculo POST renavam excedido" time="0.024"/>
+  </testsuite>
+  <testsuite name="NEG-125 veiculo POST placa excedido" file="06 Cenarios de erro/125 veiculo POST placa excedido.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.072">
+    <testcase name="NEG-125: HTTP 400" status="pass" classname="06 Cenarios de erro/125 veiculo POST placa excedido" time="0.024"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/125 veiculo POST placa excedido" time="0.024"/>
+    <testcase name="Campo rejeitado: placa" status="pass" classname="06 Cenarios de erro/125 veiculo POST placa excedido" time="0.024"/>
+  </testsuite>
+  <testsuite name="NEG-126 veiculo POST dono inexistente" file="06 Cenarios de erro/126 veiculo POST dono inexistente.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.068">
+    <testcase name="NEG-126: HTTP 404" status="pass" classname="06 Cenarios de erro/126 veiculo POST dono inexistente" time="0.034"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/126 veiculo POST dono inexistente" time="0.034"/>
+  </testsuite>
+  <testsuite name="NEG-127 veiculo PATCH tipo invalido" file="06 Cenarios de erro/127 veiculo PATCH tipo invalido.bru" errors="0" failures="1" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.063">
+    <testcase name="Campo rejeitado: tipo" status="fail" classname="06 Cenarios de erro/127 veiculo PATCH tipo invalido" time="0.021">
+      <failure type="failure" message="expected false to equal true"/>
+    </testcase>
+    <testcase name="NEG-127: HTTP 400" status="pass" classname="06 Cenarios de erro/127 veiculo PATCH tipo invalido" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/127 veiculo PATCH tipo invalido" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-128 veiculo PATCH idProprietario zero" file="06 Cenarios de erro/128 veiculo PATCH idProprietario zero.bru" errors="0" failures="1" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="Campo rejeitado: idProprietario" status="fail" classname="06 Cenarios de erro/128 veiculo PATCH idProprietario zero" time="0.021">
+      <failure type="failure" message="expected false to equal true"/>
+    </testcase>
+    <testcase name="NEG-128: HTTP 400" status="pass" classname="06 Cenarios de erro/128 veiculo PATCH idProprietario zero" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/128 veiculo PATCH idProprietario zero" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-129 veiculo PATCH idProprietario negativo" file="06 Cenarios de erro/129 veiculo PATCH idProprietario negativo.bru" errors="0" failures="1" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.059">
+    <testcase name="Campo rejeitado: idProprietario" status="fail" classname="06 Cenarios de erro/129 veiculo PATCH idProprietario negativo" time="0.020">
+      <failure type="failure" message="expected false to equal true"/>
+    </testcase>
+    <testcase name="NEG-129: HTTP 400" status="pass" classname="06 Cenarios de erro/129 veiculo PATCH idProprietario negativo" time="0.020"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/129 veiculo PATCH idProprietario negativo" time="0.020"/>
+  </testsuite>
+  <testsuite name="NEG-130 veiculo PATCH idProprietario texto" file="06 Cenarios de erro/130 veiculo PATCH idProprietario texto.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.064">
+    <testcase name="NEG-130: HTTP 400" status="pass" classname="06 Cenarios de erro/130 veiculo PATCH idProprietario texto" time="0.032"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/130 veiculo PATCH idProprietario texto" time="0.032"/>
+  </testsuite>
+  <testsuite name="NEG-131 veiculo PATCH idProprietario overflow" file="06 Cenarios de erro/131 veiculo PATCH idProprietario overflow.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-131: HTTP 400" status="pass" classname="06 Cenarios de erro/131 veiculo PATCH idProprietario overflow" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/131 veiculo PATCH idProprietario overflow" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-132 veiculo PATCH anoFabricacao zero" file="06 Cenarios de erro/132 veiculo PATCH anoFabricacao zero.bru" errors="0" failures="1" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="Campo rejeitado: anoFabricacao" status="fail" classname="06 Cenarios de erro/132 veiculo PATCH anoFabricacao zero" time="0.021">
+      <failure type="failure" message="expected false to equal true"/>
+    </testcase>
+    <testcase name="NEG-132: HTTP 400" status="pass" classname="06 Cenarios de erro/132 veiculo PATCH anoFabricacao zero" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/132 veiculo PATCH anoFabricacao zero" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-133 veiculo PATCH anoFabricacao negativo" file="06 Cenarios de erro/133 veiculo PATCH anoFabricacao negativo.bru" errors="0" failures="1" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="Campo rejeitado: anoFabricacao" status="fail" classname="06 Cenarios de erro/133 veiculo PATCH anoFabricacao negativo" time="0.021">
+      <failure type="failure" message="expected false to equal true"/>
+    </testcase>
+    <testcase name="NEG-133: HTTP 400" status="pass" classname="06 Cenarios de erro/133 veiculo PATCH anoFabricacao negativo" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/133 veiculo PATCH anoFabricacao negativo" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-134 veiculo PATCH anoFabricacao texto" file="06 Cenarios de erro/134 veiculo PATCH anoFabricacao texto.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.060">
+    <testcase name="NEG-134: HTTP 400" status="pass" classname="06 Cenarios de erro/134 veiculo PATCH anoFabricacao texto" time="0.030"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/134 veiculo PATCH anoFabricacao texto" time="0.030"/>
+  </testsuite>
+  <testsuite name="NEG-135 veiculo PATCH anoFabricacao overflow" file="06 Cenarios de erro/135 veiculo PATCH anoFabricacao overflow.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-135: HTTP 400" status="pass" classname="06 Cenarios de erro/135 veiculo PATCH anoFabricacao overflow" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/135 veiculo PATCH anoFabricacao overflow" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-136 veiculo PATCH chassi excedido" file="06 Cenarios de erro/136 veiculo PATCH chassi excedido.bru" errors="0" failures="1" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.060">
+    <testcase name="Campo rejeitado: chassi" status="fail" classname="06 Cenarios de erro/136 veiculo PATCH chassi excedido" time="0.020">
+      <failure type="failure" message="expected false to equal true"/>
+    </testcase>
+    <testcase name="NEG-136: HTTP 400" status="pass" classname="06 Cenarios de erro/136 veiculo PATCH chassi excedido" time="0.020"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/136 veiculo PATCH chassi excedido" time="0.020"/>
+  </testsuite>
+  <testsuite name="NEG-137 veiculo PATCH renavam excedido" file="06 Cenarios de erro/137 veiculo PATCH renavam excedido.bru" errors="0" failures="1" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="Campo rejeitado: renavam" status="fail" classname="06 Cenarios de erro/137 veiculo PATCH renavam excedido" time="0.020">
+      <failure type="failure" message="expected false to equal true"/>
+    </testcase>
+    <testcase name="NEG-137: HTTP 400" status="pass" classname="06 Cenarios de erro/137 veiculo PATCH renavam excedido" time="0.020"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/137 veiculo PATCH renavam excedido" time="0.020"/>
+  </testsuite>
+  <testsuite name="NEG-138 veiculo PATCH placa excedido" file="06 Cenarios de erro/138 veiculo PATCH placa excedido.bru" errors="0" failures="1" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="Campo rejeitado: placa" status="fail" classname="06 Cenarios de erro/138 veiculo PATCH placa excedido" time="0.020">
+      <failure type="failure" message="expected false to equal true"/>
+    </testcase>
+    <testcase name="NEG-138: HTTP 400" status="pass" classname="06 Cenarios de erro/138 veiculo PATCH placa excedido" time="0.020"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/138 veiculo PATCH placa excedido" time="0.020"/>
+  </testsuite>
+  <testsuite name="NEG-139 veiculo PATCH dono inexistente" file="06 Cenarios de erro/139 veiculo PATCH dono inexistente.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-139: HTTP 404" status="pass" classname="06 Cenarios de erro/139 veiculo PATCH dono inexistente" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/139 veiculo PATCH dono inexistente" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-140 veiculo PATCH tipo branco" file="06 Cenarios de erro/140 veiculo PATCH tipo branco.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.060">
+    <testcase name="NEG-140: HTTP 400" status="pass" classname="06 Cenarios de erro/140 veiculo PATCH tipo branco" time="0.030"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/140 veiculo PATCH tipo branco" time="0.030"/>
+  </testsuite>
+  <testsuite name="NEG-141 veiculo PATCH chassi branco" file="06 Cenarios de erro/141 veiculo PATCH chassi branco.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.059">
+    <testcase name="NEG-141: HTTP 400" status="pass" classname="06 Cenarios de erro/141 veiculo PATCH chassi branco" time="0.029"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/141 veiculo PATCH chassi branco" time="0.029"/>
+  </testsuite>
+  <testsuite name="NEG-142 veiculo PATCH renavam branco" file="06 Cenarios de erro/142 veiculo PATCH renavam branco.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-142: HTTP 400" status="pass" classname="06 Cenarios de erro/142 veiculo PATCH renavam branco" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/142 veiculo PATCH renavam branco" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-143 veiculo PATCH placa branco" file="06 Cenarios de erro/143 veiculo PATCH placa branco.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-143: HTTP 400" status="pass" classname="06 Cenarios de erro/143 veiculo PATCH placa branco" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/143 veiculo PATCH placa branco" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-144 veiculo POST chassi duplicado" file="06 Cenarios de erro/144 veiculo POST chassi duplicado.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-144: HTTP 409" status="pass" classname="06 Cenarios de erro/144 veiculo POST chassi duplicado" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/144 veiculo POST chassi duplicado" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-145 veiculo PATCH chassi duplicado" file="06 Cenarios de erro/145 veiculo PATCH chassi duplicado.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.065">
+    <testcase name="NEG-145: HTTP 409" status="pass" classname="06 Cenarios de erro/145 veiculo PATCH chassi duplicado" time="0.032"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/145 veiculo PATCH chassi duplicado" time="0.032"/>
+  </testsuite>
+  <testsuite name="NEG-146 veiculo POST renavam duplicado" file="06 Cenarios de erro/146 veiculo POST renavam duplicado.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.063">
+    <testcase name="NEG-146: HTTP 409" status="pass" classname="06 Cenarios de erro/146 veiculo POST renavam duplicado" time="0.032"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/146 veiculo POST renavam duplicado" time="0.032"/>
+  </testsuite>
+  <testsuite name="NEG-147 veiculo PATCH renavam duplicado" file="06 Cenarios de erro/147 veiculo PATCH renavam duplicado.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.064">
+    <testcase name="NEG-147: HTTP 409" status="pass" classname="06 Cenarios de erro/147 veiculo PATCH renavam duplicado" time="0.032"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/147 veiculo PATCH renavam duplicado" time="0.032"/>
+  </testsuite>
+  <testsuite name="NEG-148 veiculo POST placa duplicado" file="06 Cenarios de erro/148 veiculo POST placa duplicado.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.070">
+    <testcase name="NEG-148: HTTP 409" status="pass" classname="06 Cenarios de erro/148 veiculo POST placa duplicado" time="0.035"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/148 veiculo POST placa duplicado" time="0.035"/>
+  </testsuite>
+  <testsuite name="NEG-149 veiculo PATCH placa duplicado" file="06 Cenarios de erro/149 veiculo PATCH placa duplicado.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.064">
+    <testcase name="NEG-149: HTTP 409" status="pass" classname="06 Cenarios de erro/149 veiculo PATCH placa duplicado" time="0.032"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/149 veiculo PATCH placa duplicado" time="0.032"/>
+  </testsuite>
+  <testsuite name="NEG-150 proprietario POST JSON malformado" file="06 Cenarios de erro/150 proprietario POST JSON malformado.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-150: HTTP 400" status="pass" classname="06 Cenarios de erro/150 proprietario POST JSON malformado" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/150 proprietario POST JSON malformado" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-151 proprietario POST corpo null" file="06 Cenarios de erro/151 proprietario POST corpo null.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.060">
+    <testcase name="NEG-151: HTTP 400" status="pass" classname="06 Cenarios de erro/151 proprietario POST corpo null" time="0.030"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/151 proprietario POST corpo null" time="0.030"/>
+  </testsuite>
+  <testsuite name="NEG-152 proprietario POST array" file="06 Cenarios de erro/152 proprietario POST array.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.059">
+    <testcase name="NEG-152: HTTP 400" status="pass" classname="06 Cenarios de erro/152 proprietario POST array" time="0.029"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/152 proprietario POST array" time="0.029"/>
+  </testsuite>
+  <testsuite name="NEG-153 proprietario POST sem corpo" file="06 Cenarios de erro/153 proprietario POST sem corpo.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.065">
+    <testcase name="NEG-153: HTTP 400" status="pass" classname="06 Cenarios de erro/153 proprietario POST sem corpo" time="0.032"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/153 proprietario POST sem corpo" time="0.032"/>
+  </testsuite>
+  <testsuite name="NEG-154 proprietario POST media type incorreto" file="06 Cenarios de erro/154 proprietario POST media type incorreto.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.060">
+    <testcase name="NEG-154: HTTP 415" status="pass" classname="06 Cenarios de erro/154 proprietario POST media type incorreto" time="0.030"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/154 proprietario POST media type incorreto" time="0.030"/>
+  </testsuite>
+  <testsuite name="NEG-155 proprietario PATCH JSON malformado" file="06 Cenarios de erro/155 proprietario PATCH JSON malformado.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.060">
+    <testcase name="NEG-155: HTTP 400" status="pass" classname="06 Cenarios de erro/155 proprietario PATCH JSON malformado" time="0.030"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/155 proprietario PATCH JSON malformado" time="0.030"/>
+  </testsuite>
+  <testsuite name="NEG-156 proprietario PATCH corpo null" file="06 Cenarios de erro/156 proprietario PATCH corpo null.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.060">
+    <testcase name="NEG-156: HTTP 400" status="pass" classname="06 Cenarios de erro/156 proprietario PATCH corpo null" time="0.030"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/156 proprietario PATCH corpo null" time="0.030"/>
+  </testsuite>
+  <testsuite name="NEG-157 proprietario PATCH array" file="06 Cenarios de erro/157 proprietario PATCH array.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-157: HTTP 400" status="pass" classname="06 Cenarios de erro/157 proprietario PATCH array" time="0.030"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/157 proprietario PATCH array" time="0.030"/>
+  </testsuite>
+  <testsuite name="NEG-158 proprietario PATCH sem corpo" file="06 Cenarios de erro/158 proprietario PATCH sem corpo.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.059">
+    <testcase name="NEG-158: HTTP 400" status="pass" classname="06 Cenarios de erro/158 proprietario PATCH sem corpo" time="0.029"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/158 proprietario PATCH sem corpo" time="0.029"/>
+  </testsuite>
+  <testsuite name="NEG-159 proprietario PATCH media type incorreto" file="06 Cenarios de erro/159 proprietario PATCH media type incorreto.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-159: HTTP 415" status="pass" classname="06 Cenarios de erro/159 proprietario PATCH media type incorreto" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/159 proprietario PATCH media type incorreto" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-160 veiculo POST JSON malformado" file="06 Cenarios de erro/160 veiculo POST JSON malformado.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.063">
+    <testcase name="NEG-160: HTTP 400" status="pass" classname="06 Cenarios de erro/160 veiculo POST JSON malformado" time="0.032"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/160 veiculo POST JSON malformado" time="0.032"/>
+  </testsuite>
+  <testsuite name="NEG-161 veiculo POST corpo null" file="06 Cenarios de erro/161 veiculo POST corpo null.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.065">
+    <testcase name="NEG-161: HTTP 400" status="pass" classname="06 Cenarios de erro/161 veiculo POST corpo null" time="0.032"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/161 veiculo POST corpo null" time="0.032"/>
+  </testsuite>
+  <testsuite name="NEG-162 veiculo POST array" file="06 Cenarios de erro/162 veiculo POST array.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-162: HTTP 400" status="pass" classname="06 Cenarios de erro/162 veiculo POST array" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/162 veiculo POST array" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-163 veiculo POST sem corpo" file="06 Cenarios de erro/163 veiculo POST sem corpo.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-163: HTTP 400" status="pass" classname="06 Cenarios de erro/163 veiculo POST sem corpo" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/163 veiculo POST sem corpo" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-164 veiculo POST media type incorreto" file="06 Cenarios de erro/164 veiculo POST media type incorreto.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-164: HTTP 415" status="pass" classname="06 Cenarios de erro/164 veiculo POST media type incorreto" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/164 veiculo POST media type incorreto" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-165 veiculo PATCH JSON malformado" file="06 Cenarios de erro/165 veiculo PATCH JSON malformado.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-165: HTTP 400" status="pass" classname="06 Cenarios de erro/165 veiculo PATCH JSON malformado" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/165 veiculo PATCH JSON malformado" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-166 veiculo PATCH corpo null" file="06 Cenarios de erro/166 veiculo PATCH corpo null.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.060">
+    <testcase name="NEG-166: HTTP 400" status="pass" classname="06 Cenarios de erro/166 veiculo PATCH corpo null" time="0.030"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/166 veiculo PATCH corpo null" time="0.030"/>
+  </testsuite>
+  <testsuite name="NEG-167 veiculo PATCH array" file="06 Cenarios de erro/167 veiculo PATCH array.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-167: HTTP 400" status="pass" classname="06 Cenarios de erro/167 veiculo PATCH array" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/167 veiculo PATCH array" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-168 veiculo PATCH sem corpo" file="06 Cenarios de erro/168 veiculo PATCH sem corpo.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.064">
+    <testcase name="NEG-168: HTTP 400" status="pass" classname="06 Cenarios de erro/168 veiculo PATCH sem corpo" time="0.032"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/168 veiculo PATCH sem corpo" time="0.032"/>
+  </testsuite>
+  <testsuite name="NEG-169 veiculo PATCH media type incorreto" file="06 Cenarios de erro/169 veiculo PATCH media type incorreto.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.063">
+    <testcase name="NEG-169: HTTP 415" status="pass" classname="06 Cenarios de erro/169 veiculo PATCH media type incorreto" time="0.032"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/169 veiculo PATCH media type incorreto" time="0.032"/>
+  </testsuite>
+  <testsuite name="NEG-170 proprietarios PUT nao permitido" file="06 Cenarios de erro/170 proprietarios PUT nao permitido.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.064">
+    <testcase name="NEG-170: HTTP 405" status="pass" classname="06 Cenarios de erro/170 proprietarios PUT nao permitido" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/170 proprietarios PUT nao permitido" time="0.021"/>
+    <testcase name="Efeito esperado" status="pass" classname="06 Cenarios de erro/170 proprietarios PUT nao permitido" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-171 veiculos PUT nao permitido" file="06 Cenarios de erro/171 veiculos PUT nao permitido.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-171: HTTP 405" status="pass" classname="06 Cenarios de erro/171 veiculos PUT nao permitido" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/171 veiculos PUT nao permitido" time="0.021"/>
+    <testcase name="Efeito esperado" status="pass" classname="06 Cenarios de erro/171 veiculos PUT nao permitido" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-172 historico PUT nao permitido" file="06 Cenarios de erro/172 historico PUT nao permitido.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.074">
+    <testcase name="NEG-172: HTTP 405" status="pass" classname="06 Cenarios de erro/172 historico PUT nao permitido" time="0.025"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/172 historico PUT nao permitido" time="0.025"/>
+    <testcase name="Efeito esperado" status="pass" classname="06 Cenarios de erro/172 historico PUT nao permitido" time="0.025"/>
+  </testsuite>
+  <testsuite name="NEG-173 log-proprietarios PUT nao permitido" file="06 Cenarios de erro/173 log-proprietarios PUT nao permitido.bru" errors="0" failures="0" skipped="0" tests="3" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.063">
+    <testcase name="NEG-173: HTTP 405" status="pass" classname="06 Cenarios de erro/173 log-proprietarios PUT nao permitido" time="0.021"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/173 log-proprietarios PUT nao permitido" time="0.021"/>
+    <testcase name="Efeito esperado" status="pass" classname="06 Cenarios de erro/173 log-proprietarios PUT nao permitido" time="0.021"/>
+  </testsuite>
+  <testsuite name="NEG-174 historico POST proibido" file="06 Cenarios de erro/174 historico POST proibido.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.063">
+    <testcase name="NEG-174: HTTP 405" status="pass" classname="06 Cenarios de erro/174 historico POST proibido" time="0.032"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/174 historico POST proibido" time="0.032"/>
+  </testsuite>
+  <testsuite name="NEG-175 historico PATCH proibido" file="06 Cenarios de erro/175 historico PATCH proibido.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-175: HTTP 405" status="pass" classname="06 Cenarios de erro/175 historico PATCH proibido" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/175 historico PATCH proibido" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-176 historico DELETE proibido" file="06 Cenarios de erro/176 historico DELETE proibido.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-176: HTTP 405" status="pass" classname="06 Cenarios de erro/176 historico DELETE proibido" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/176 historico DELETE proibido" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-177 log-proprietarios POST proibido" file="06 Cenarios de erro/177 log-proprietarios POST proibido.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.063">
+    <testcase name="NEG-177: HTTP 405" status="pass" classname="06 Cenarios de erro/177 log-proprietarios POST proibido" time="0.032"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/177 log-proprietarios POST proibido" time="0.032"/>
+  </testsuite>
+  <testsuite name="NEG-178 log-proprietarios PATCH proibido" file="06 Cenarios de erro/178 log-proprietarios PATCH proibido.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.066">
+    <testcase name="NEG-178: HTTP 405" status="pass" classname="06 Cenarios de erro/178 log-proprietarios PATCH proibido" time="0.033"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/178 log-proprietarios PATCH proibido" time="0.033"/>
+  </testsuite>
+  <testsuite name="NEG-179 log-proprietarios DELETE proibido" file="06 Cenarios de erro/179 log-proprietarios DELETE proibido.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.063">
+    <testcase name="NEG-179: HTTP 405" status="pass" classname="06 Cenarios de erro/179 log-proprietarios DELETE proibido" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/179 log-proprietarios DELETE proibido" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-180 Rota inexistente" file="06 Cenarios de erro/180 Rota inexistente.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.066">
+    <testcase name="NEG-180: HTTP 404" status="pass" classname="06 Cenarios de erro/180 Rota inexistente" time="0.033"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/180 Rota inexistente" time="0.033"/>
+  </testsuite>
+  <testsuite name="NEG-181 Ordenacao por atributo inexistente" file="06 Cenarios de erro/181 Ordenacao por atributo inexistente.bru" errors="0" failures="1" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.065">
+    <testcase name="NEG-181: HTTP 400" status="fail" classname="06 Cenarios de erro/181 Ordenacao por atributo inexistente" time="0.032">
+      <failure type="failure" message="expected 500 to equal 400"/>
+    </testcase>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/181 Ordenacao por atributo inexistente" time="0.032"/>
+  </testsuite>
+  <testsuite name="NEG-182 Paginacao com offset maior que limite JPA" file="06 Cenarios de erro/182 Paginacao com offset maior que limite JPA.bru" errors="0" failures="1" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.063">
+    <testcase name="NEG-182: HTTP 400" status="fail" classname="06 Cenarios de erro/182 Paginacao com offset maior que limite JPA" time="0.031">
+      <failure type="failure" message="expected 500 to equal 400"/>
+    </testcase>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/182 Paginacao com offset maior que limite JPA" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-183 Paginacao normaliza page -1" file="06 Cenarios de erro/183 Paginacao normaliza page -1.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.063">
+    <testcase name="NEG-183: HTTP 200" status="pass" classname="06 Cenarios de erro/183 Paginacao normaliza page -1" time="0.032"/>
+    <testcase name="Efeito esperado" status="pass" classname="06 Cenarios de erro/183 Paginacao normaliza page -1" time="0.032"/>
+  </testsuite>
+  <testsuite name="NEG-184 Paginacao normaliza page abc" file="06 Cenarios de erro/184 Paginacao normaliza page abc.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.064">
+    <testcase name="NEG-184: HTTP 200" status="pass" classname="06 Cenarios de erro/184 Paginacao normaliza page abc" time="0.032"/>
+    <testcase name="Efeito esperado" status="pass" classname="06 Cenarios de erro/184 Paginacao normaliza page abc" time="0.032"/>
+  </testsuite>
+  <testsuite name="NEG-185 Paginacao normaliza size 0" file="06 Cenarios de erro/185 Paginacao normaliza size 0.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.065">
+    <testcase name="NEG-185: HTTP 200" status="pass" classname="06 Cenarios de erro/185 Paginacao normaliza size 0" time="0.033"/>
+    <testcase name="Efeito esperado" status="pass" classname="06 Cenarios de erro/185 Paginacao normaliza size 0" time="0.033"/>
+  </testsuite>
+  <testsuite name="NEG-186 Paginacao normaliza size -1" file="06 Cenarios de erro/186 Paginacao normaliza size -1.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.064">
+    <testcase name="NEG-186: HTTP 200" status="pass" classname="06 Cenarios de erro/186 Paginacao normaliza size -1" time="0.032"/>
+    <testcase name="Efeito esperado" status="pass" classname="06 Cenarios de erro/186 Paginacao normaliza size -1" time="0.032"/>
+  </testsuite>
+  <testsuite name="NEG-187 Paginacao normaliza size abc" file="06 Cenarios de erro/187 Paginacao normaliza size abc.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.065">
+    <testcase name="NEG-187: HTTP 200" status="pass" classname="06 Cenarios de erro/187 Paginacao normaliza size abc" time="0.032"/>
+    <testcase name="Efeito esperado" status="pass" classname="06 Cenarios de erro/187 Paginacao normaliza size abc" time="0.032"/>
+  </testsuite>
+  <testsuite name="NEG-188 Paginacao normaliza size 100" file="06 Cenarios de erro/188 Paginacao normaliza size 100.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.068">
+    <testcase name="NEG-188: HTTP 200" status="pass" classname="06 Cenarios de erro/188 Paginacao normaliza size 100" time="0.034"/>
+    <testcase name="Efeito esperado" status="pass" classname="06 Cenarios de erro/188 Paginacao normaliza size 100" time="0.034"/>
+  </testsuite>
+  <testsuite name="NEG-189 Pagina fora dos resultados" file="06 Cenarios de erro/189 Pagina fora dos resultados.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.068">
+    <testcase name="NEG-189: HTTP 200" status="pass" classname="06 Cenarios de erro/189 Pagina fora dos resultados" time="0.034"/>
+    <testcase name="Efeito esperado" status="pass" classname="06 Cenarios de erro/189 Pagina fora dos resultados" time="0.034"/>
+  </testsuite>
+  <testsuite name="NEG-190 proprietario PATCH vazio preserva dados" file="06 Cenarios de erro/190 proprietario PATCH vazio preserva dados.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.064">
+    <testcase name="NEG-190: HTTP 200" status="pass" classname="06 Cenarios de erro/190 proprietario PATCH vazio preserva dados" time="0.032"/>
+    <testcase name="Efeito esperado" status="pass" classname="06 Cenarios de erro/190 proprietario PATCH vazio preserva dados" time="0.032"/>
+  </testsuite>
+  <testsuite name="NEG-191 proprietario PATCH campos nulos preserva dados" file="06 Cenarios de erro/191 proprietario PATCH campos nulos preserva dados.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.063">
+    <testcase name="NEG-191: HTTP 200" status="pass" classname="06 Cenarios de erro/191 proprietario PATCH campos nulos preserva dados" time="0.032"/>
+    <testcase name="Efeito esperado" status="pass" classname="06 Cenarios de erro/191 proprietario PATCH campos nulos preserva dados" time="0.032"/>
+  </testsuite>
+  <testsuite name="NEG-192 proprietario falhas nao alteraram registro" file="06 Cenarios de erro/192 proprietario falhas nao alteraram registro.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.063">
+    <testcase name="NEG-192: HTTP 200" status="pass" classname="06 Cenarios de erro/192 proprietario falhas nao alteraram registro" time="0.031"/>
+    <testcase name="Efeito esperado" status="pass" classname="06 Cenarios de erro/192 proprietario falhas nao alteraram registro" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-193 veiculo PATCH vazio preserva dados" file="06 Cenarios de erro/193 veiculo PATCH vazio preserva dados.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.063">
+    <testcase name="NEG-193: HTTP 200" status="pass" classname="06 Cenarios de erro/193 veiculo PATCH vazio preserva dados" time="0.031"/>
+    <testcase name="Efeito esperado" status="pass" classname="06 Cenarios de erro/193 veiculo PATCH vazio preserva dados" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-194 veiculo PATCH campos nulos preserva dados" file="06 Cenarios de erro/194 veiculo PATCH campos nulos preserva dados.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-194: HTTP 200" status="pass" classname="06 Cenarios de erro/194 veiculo PATCH campos nulos preserva dados" time="0.030"/>
+    <testcase name="Efeito esperado" status="pass" classname="06 Cenarios de erro/194 veiculo PATCH campos nulos preserva dados" time="0.030"/>
+  </testsuite>
+  <testsuite name="NEG-195 veiculo falhas nao alteraram registro" file="06 Cenarios de erro/195 veiculo falhas nao alteraram registro.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.072">
+    <testcase name="NEG-195: HTTP 200" status="pass" classname="06 Cenarios de erro/195 veiculo falhas nao alteraram registro" time="0.036"/>
+    <testcase name="Efeito esperado" status="pass" classname="06 Cenarios de erro/195 veiculo falhas nao alteraram registro" time="0.036"/>
+  </testsuite>
+  <testsuite name="NEG-196 segundo veiculo conflitos nao alteraram registro" file="06 Cenarios de erro/196 segundo veiculo conflitos nao alteraram registro.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-196: HTTP 200" status="pass" classname="06 Cenarios de erro/196 segundo veiculo conflitos nao alteraram registro" time="0.030"/>
+    <testcase name="Efeito esperado" status="pass" classname="06 Cenarios de erro/196 segundo veiculo conflitos nao alteraram registro" time="0.030"/>
+  </testsuite>
+  <testsuite name="NEG-197 Excluir veiculo de teste" file="06 Cenarios de erro/197 Excluir veiculo de teste.bru" errors="0" failures="0" skipped="0" tests="1" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-197: HTTP 204" status="pass" classname="06 Cenarios de erro/197 Excluir veiculo de teste" time="0.061"/>
+  </testsuite>
+  <testsuite name="NEG-198 veiculo excluido GET" file="06 Cenarios de erro/198 veiculo excluido GET.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-198: HTTP 404" status="pass" classname="06 Cenarios de erro/198 veiculo excluido GET" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/198 veiculo excluido GET" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-199 veiculo excluido PATCH" file="06 Cenarios de erro/199 veiculo excluido PATCH.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-199: HTTP 404" status="pass" classname="06 Cenarios de erro/199 veiculo excluido PATCH" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/199 veiculo excluido PATCH" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-200 veiculo excluido DELETE" file="06 Cenarios de erro/200 veiculo excluido DELETE.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-200: HTTP 404" status="pass" classname="06 Cenarios de erro/200 veiculo excluido DELETE" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/200 veiculo excluido DELETE" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-201 Excluir proprietario e veiculo em cascata" file="06 Cenarios de erro/201 Excluir proprietario e veiculo em cascata.bru" errors="0" failures="0" skipped="0" tests="1" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.064">
+    <testcase name="NEG-201: HTTP 204" status="pass" classname="06 Cenarios de erro/201 Excluir proprietario e veiculo em cascata" time="0.064"/>
+  </testsuite>
+  <testsuite name="NEG-202 proprietario excluido GET" file="06 Cenarios de erro/202 proprietario excluido GET.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-202: HTTP 404" status="pass" classname="06 Cenarios de erro/202 proprietario excluido GET" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/202 proprietario excluido GET" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-203 proprietario excluido PATCH" file="06 Cenarios de erro/203 proprietario excluido PATCH.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.063">
+    <testcase name="NEG-203: HTTP 404" status="pass" classname="06 Cenarios de erro/203 proprietario excluido PATCH" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/203 proprietario excluido PATCH" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-204 proprietario excluido DELETE" file="06 Cenarios de erro/204 proprietario excluido DELETE.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-204: HTTP 404" status="pass" classname="06 Cenarios de erro/204 proprietario excluido DELETE" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/204 proprietario excluido DELETE" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-205 veiculo cascata excluido GET" file="06 Cenarios de erro/205 veiculo cascata excluido GET.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-205: HTTP 404" status="pass" classname="06 Cenarios de erro/205 veiculo cascata excluido GET" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/205 veiculo cascata excluido GET" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-206 veiculo cascata excluido PATCH" file="06 Cenarios de erro/206 veiculo cascata excluido PATCH.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.065">
+    <testcase name="NEG-206: HTTP 404" status="pass" classname="06 Cenarios de erro/206 veiculo cascata excluido PATCH" time="0.032"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/206 veiculo cascata excluido PATCH" time="0.032"/>
+  </testsuite>
+  <testsuite name="NEG-207 veiculo cascata excluido DELETE" file="06 Cenarios de erro/207 veiculo cascata excluido DELETE.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-207: HTTP 404" status="pass" classname="06 Cenarios de erro/207 veiculo cascata excluido DELETE" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/207 veiculo cascata excluido DELETE" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-208 Cadastrar veiculo com dono inativo" file="06 Cenarios de erro/208 Cadastrar veiculo com dono inativo.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.060">
+    <testcase name="NEG-208: HTTP 404" status="pass" classname="06 Cenarios de erro/208 Cadastrar veiculo com dono inativo" time="0.030"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/208 Cadastrar veiculo com dono inativo" time="0.030"/>
+  </testsuite>
+  <testsuite name="NEG-209 CPF excluido continua reservado" file="06 Cenarios de erro/209 CPF excluido continua reservado.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.062">
+    <testcase name="NEG-209: HTTP 409" status="pass" classname="06 Cenarios de erro/209 CPF excluido continua reservado" time="0.031"/>
+    <testcase name="Contrato de erro e ausencia de detalhes internos" status="pass" classname="06 Cenarios de erro/209 CPF excluido continua reservado" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-210 Listagem oculta proprietario inativo" file="06 Cenarios de erro/210 Listagem oculta proprietario inativo.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-210: HTTP 200" status="pass" classname="06 Cenarios de erro/210 Listagem oculta proprietario inativo" time="0.030"/>
+    <testcase name="Efeito esperado" status="pass" classname="06 Cenarios de erro/210 Listagem oculta proprietario inativo" time="0.030"/>
+  </testsuite>
+  <testsuite name="NEG-211 Listagem oculta veiculos inativos" file="06 Cenarios de erro/211 Listagem oculta veiculos inativos.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.061">
+    <testcase name="NEG-211: HTTP 200" status="pass" classname="06 Cenarios de erro/211 Listagem oculta veiculos inativos" time="0.031"/>
+    <testcase name="Efeito esperado" status="pass" classname="06 Cenarios de erro/211 Listagem oculta veiculos inativos" time="0.031"/>
+  </testsuite>
+  <testsuite name="NEG-212 Historico preservado apos exclusao" file="06 Cenarios de erro/212 Historico preservado apos exclusao.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.064">
+    <testcase name="NEG-212: HTTP 200" status="pass" classname="06 Cenarios de erro/212 Historico preservado apos exclusao" time="0.032"/>
+    <testcase name="Efeito esperado" status="pass" classname="06 Cenarios de erro/212 Historico preservado apos exclusao" time="0.032"/>
+  </testsuite>
+  <testsuite name="NEG-213 Log preservado apos exclusao" file="06 Cenarios de erro/213 Log preservado apos exclusao.bru" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-10-23T14:32:37.137" hostname="NTI-65270" time="0.060">
+    <testcase name="NEG-213: HTTP 200" status="pass" classname="06 Cenarios de erro/213 Log preservado apos exclusao" time="0.030"/>
+    <testcase name="Efeito esperado" status="pass" classname="06 Cenarios de erro/213 Log preservado apos exclusao" time="0.030"/>
+  </testsuite>
+</testsuites>

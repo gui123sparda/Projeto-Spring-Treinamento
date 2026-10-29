@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard · Treinamento CRUD</title>
+    <link rel="preload" th:href="@{/img/DETRAN.svg}" as="image" type="image/svg+xml">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css">
+    <link th:href="@{/css/app.css}" rel="stylesheet" type="text/css">
+    <script>
+        try {
+            if (sessionStorage.getItem("introDetranExibida")) {
+                document.documentElement.classList.add("intro-vista");
+            } else {
+                sessionStorage.setItem("introDetranExibida", "true");
+            }
+        } catch (_) { /* A animação ainda termina pelo CSS se o armazenamento estiver indisponível. */ }
+    </script>
+</head>
+<body>
+    <div class="intro-overlay" aria-hidden="true">
+        <img class="intro-logo" th:src="@{/img/DETRAN.svg}" alt="">
+    </div>
+    <header th:replace="~{fragments/header :: header}"></header>
+    <main class="page-shell">
+        <div class="dashboard-heading">
+            <div>
+                <p class="eyebrow">Painel de controle</p>
+                <h1>Dashboard</h1>
+                <p>Acompanhe os cadastros de veículos e proprietários.</p>
+            </div>
+        </div>
+        <div th:replace="~{fragments/mensagens :: mensagens}"></div>
+<section class="dashboard-metrics" aria-label="Indicadores gerais">
+            <div class="stats dashboard-metric">
+                <div class="stat">
+                    <div class="stat-figure dashboard-metric-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 9h8M8 13h8M8 17h5"/></svg></div>
+                    <div class="stat-title">Veículos</div>
+                    <div class="stat-value"><span th:text="${totalVeiculos}">0</span></div>
+                    <div class="stat-desc">Total cadastrado</div>
+                </div>
+            </div>
+            <div class="stats dashboard-metric">
+                <div class="stat">
+                    <div class="stat-figure dashboard-metric-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 15l1.5-5h11L19 15M4 15h16v3H4z"/><circle cx="7" cy="18" r="1"/><circle cx="17" cy="18" r="1"/></svg></div>
+                    <div class="stat-title">Carros</div>
+                    <div class="stat-value"><span th:text="${totalCarros}">0</span></div>
+                    <div class="stat-desc">Veículos do tipo carro</div>
+                </div>
+            </div>
+            <div class="stats dashboard-metric">
+                <div class="stat">
+                    <div class="stat-figure dashboard-metric-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="5" cy="17" r="3"/><circle cx="19" cy="17" r="3"/><path d="M8 17h4l3-7h3M12 17l-3-7H7"/></svg></div>
+                    <div class="stat-title">Motos</div>
+                    <div class="stat-value"><span th:text="${totalMotos}">0</span></div>
+                    <div class="stat-desc">Veículos do tipo moto</div>
+                </div>
+            </div>
+            <div class="stats dashboard-metric">
+                <div class="stat">
+                    <div class="stat-figure dashboard-metric-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-4 2.5-6 7-6s7 2 7 6"/></svg></div>
+                    <div class="stat-title">Proprietários</div>
+                    <div class="stat-value"><span th:text="${totalProprietarios}">0</span></div>
+                    <div class="stat-desc">Pessoas e empresas</div>
+                </div>
+            </div>
+        </section>
+        <div class="dashboard-content-grid">
+            <section class="card panel dashboard-chart-card" aria-labelledby="historico-titulo">
+                <div class="card-body">
+                    <div class="dashboard-section-heading">
+                        <div>
+                            <p class="eyebrow">Atividade</p>
+                            <h2 class="card-title" id="historico-titulo">Proprietários por dia</h2>
+                            <p>Cadastros e alterações nos últimos 14 dias</p>
+                        </div>
+                        <span class="badge badge-ghost dashboard-period">14 dias</span>
+                    </div>
+                    <form class="dashboard-chart-filter" th:action="@{/}" method="get">
+                        <fieldset class="fieldset">
+                            <legend class="fieldset-legend">Tipo de proprietário</legend>
+                            <div class="dashboard-chart-filter-controls">
+                                <select class="select select-sm" name="tipoPessoa" aria-label="Filtrar histórico por tipo de proprietário">
+                                    <option value="" th:selected="${tipoPessoaHistorico == ''}">Todos</option>
+                                    <option value="PF" th:selected="${tipoPessoaHistorico == 'PF'}">Pessoas físicas</option>
+                                    <option value="PJ" th:selected="${tipoPessoaHistorico == 'PJ'}">Empresas</option>
+                                </select>
+                                <button class="btn btn-sm" type="submit">Filtrar</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <div class="dashboard-chart-legend" aria-hidden="true">
+                        <span><i class="dashboard-legend-dot dashboard-legend-cadastros"></i> Cadastrados</span>
+                        <span><i class="dashboard-legend-dot dashboard-legend-alteracoes"></i> Alterados</span>
+                    </div>
+                    <div class="dashboard-chart-scroll">
+                        <div class="dashboard-chart" role="img" aria-label="Gráfico de proprietários cadastrados e alterados por dia nos últimos 14 dias. A tabela abaixo contém os valores exatos.">
+                            <div class="dashboard-chart-day" th:each="dia : ${historicoProprietarios}">
+                                <div class="dashboard-chart-columns">
+                                    <span class="dashboard-chart-bar dashboard-chart-bar-cadastros" th:style="|height: ${dia.cadastros == 0 ? 0 : T(java.lang.Math).max(5L, dia.cadastros * 100 / escalaHistorico)}%|" th:title="|${dia.cadastros} cadastros em ${dia.rotulo}|"></span>
+                                    <span class="dashboard-chart-bar dashboard-chart-bar-alteracoes" th:style="|height: ${dia.alteracoes == 0 ? 0 : T(java.lang.Math).max(5L, dia.alteracoes * 100 / escalaHistorico)}%|" th:title="|${dia.alteracoes} alteracoes em ${dia.rotulo}|"></span>
+                                </div>
+                                <time th:datetime="${dia.dia}" th:text="${dia.rotulo}"></time>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <p class="dashboard-chart-note">Cada proprietário é contado uma vez por dia em cada categoria.</p>
+                    <details class="dashboard-chart-data">
+                        <summary>Ver números por dia</summary>
+                        <div class="table-wrap overflow-x-auto">
+                            <table class="table table-zebra table-sm">
+                                <thead><tr><th scope="col">Dia</th><th scope="col">Cadastrados</th><th scope="col">Alterados</th></tr></thead>
+                                <tbody>
+                                    <tr th:each="dia : ${historicoProprietarios}"><th scope="row"><time th:datetime="${dia.dia}" th:text="${dia.rotulo}"></time></th><td th:text="${dia.cadastros}"></td><td th:text="${dia.alteracoes}"></td></tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </details>
+                </div>
+            </section>
+            <section class="card panel dashboard-fleet-card" aria-labelledby="frota-titulo">
+                <div class="card-body">
+                    <p class="eyebrow">Frota</p>
+                    <h2 class="card-title" id="frota-titulo">Tipos de veículo</h2>
+                    <p class="dashboard-fleet-description">Distribuição dos veículos cadastrados</p>
+                    <div class="dashboard-donut" th:classappend="${totalVeiculos == 0} ? 'dashboard-donut-empty'" th:style="|--carros: ${percentualCarros}%|" role="img" th:aria-label="|${totalCarros} carros e ${totalMotos} motos|">
+                        <div class="dashboard-donut-center"><strong><span th:text="${totalVeiculos}">0</span></strong><span>veículos</span></div>
+                    </div>
+                    <div class="dashboard-fleet-legend">
+                        <div><span><i class="dashboard-legend-dot dashboard-legend-cadastros"></i> Carros</span><strong><span th:text="${totalCarros}">0</span></strong></div>
+                        <div><span><i class="dashboard-legend-dot dashboard-legend-alteracoes"></i> Motos</span><strong><span th:text="${totalMotos}">0</span></strong></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

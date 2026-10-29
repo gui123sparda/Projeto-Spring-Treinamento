@@ -1,0 +1,20 @@
+meta {
+  name: NEG-196 segundo veiculo conflitos nao alteraram registro
+  type: http
+  seq: 196
+}
+
+get {
+  url: {{baseUrl}}/api/veiculos/{{erroVeiculo2Id}}
+  body: none
+  auth: none
+}
+
+tests {
+  test("NEG-196: HTTP 200", function () {
+    expect(res.getStatus()).to.equal(200);
+  });
+  test("Efeito esperado", function () {
+    expect(res.getBody()).to.deep.equal(bru.getVar("erroVeiculo2IdOriginal"));
+  });
+}

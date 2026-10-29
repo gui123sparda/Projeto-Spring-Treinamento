@@ -1,0 +1,21 @@
+meta {
+  name: NEG-187 Paginacao normaliza size abc
+  type: http
+  seq: 187
+}
+
+get {
+  url: {{baseUrl}}/api/veiculos?size=abc
+  body: none
+  auth: none
+}
+
+tests {
+  test("NEG-187: HTTP 200", function () {
+    expect(res.getStatus()).to.equal(200);
+  });
+  test("Efeito esperado", function () {
+    expect(res.getBody().size).to.equal(15);
+    expect(res.getBody().content.length).to.be.at.most(15);
+  });
+}

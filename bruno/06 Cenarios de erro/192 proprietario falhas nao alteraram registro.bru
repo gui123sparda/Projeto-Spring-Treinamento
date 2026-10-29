@@ -1,0 +1,20 @@
+meta {
+  name: NEG-192 proprietario falhas nao alteraram registro
+  type: http
+  seq: 192
+}
+
+get {
+  url: {{baseUrl}}/api/proprietarios/{{erroProprietarioId}}
+  body: none
+  auth: none
+}
+
+tests {
+  test("NEG-192: HTTP 200", function () {
+    expect(res.getStatus()).to.equal(200);
+  });
+  test("Efeito esperado", function () {
+    expect(res.getBody()).to.deep.equal(bru.getVar("erroProprietarioIdOriginal"));
+  });
+}

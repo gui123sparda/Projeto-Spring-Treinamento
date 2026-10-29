@@ -1,0 +1,43 @@
+meta {
+  name: Cadastrar veiculo
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/veiculos
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "tipo": "CARRO",
+    "idProprietario": {{proprietarioId}},
+    "anoFabricacao": 2024,
+    "chassi": "{{chassi}}",
+    "renavam": "{{renavam}}",
+    "placa": "{{placa}}"
+  }
+}
+
+script:post-response {
+  if (res.getStatus() === 201) {
+    bru.setVar("veiculoId", res.getBody().id);
+  }
+}
+
+tests {
+  test("Status HTTP 201", function () {
+    expect(res.getStatus()).to.equal(201);
+  });
+  test("Veiculo vinculado ao proprietario", function () {
+    expect(res.getBody().id).to.be.a("number").and.above(0);
+    expect(res.getBody().idProprietario).to.equal(bru.getVar("proprietarioId"));
+    expect(res.getBody().placa).to.equal(bru.getVar("placa"));
+  });
+}

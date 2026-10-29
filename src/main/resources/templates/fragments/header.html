@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<body>
+<header class="site-header" th:fragment="header">
+    <div class="project-strip">
+        <div class="project-strip-inner">
+            <a class="project-name" th:href="@{/}" aria-label="Treinamento CRUD — início">
+                <img class="brand-logo" th:src="@{/img/DETRAN.svg}" alt="">
+                <span>DETRAN · Treinamento CRUD</span>
+            </a>
+            <button class="btn btn-soft btn-neutral btn-sm" id="ativar-notificacoes" type="button" hidden>Ativar notificações</button>
+            <button class="theme-toggle btn btn-soft btn-neutral btn-sm" id="theme-toggle" type="button">Modo escuro</button>
+        </div>
+    </div>
+    <nav class="mega-nav" aria-label="Navegação principal">
+        <div class="mega-nav-inner">
+            <details class="mega-item" name="site-mega-menu">
+                <summary class="mega-tab">Veículos <span class="mega-chevron" aria-hidden="true">⌄</span></summary>
+                <div class="mega-panel"><div class="mega-panel-heading"><span class="eyebrow">Veículos</span><strong>Cadastro e consultas</strong><p>Gerencie veículos e consulte placas.</p></div><div class="mega-links"><a class="mega-link" th:href="@{/veiculos/novo}"><span><strong>Novo veículo</strong><small>Cadastrar veículo.</small></span></a><a class="mega-link" th:href="@{/veiculos/consultar-placa}"><span><strong>Consultar placa</strong><small>Veículo e proprietário.</small></span></a><a class="mega-link" th:href="@{/veiculos}"><span><strong>Lista de veículos</strong><small>Consultar cadastros.</small></span></a></div></div>
+            </details>
+            <details class="mega-item" name="site-mega-menu">
+                <summary class="mega-tab">Pessoa Física <span class="mega-chevron" aria-hidden="true">⌄</span></summary>
+                <div class="mega-panel"><div class="mega-panel-heading"><span class="eyebrow">Pessoa Física</span><strong>Proprietários com CPF</strong><p>Cadastre e consulte pessoas físicas.</p></div><div class="mega-links"><a class="mega-link" th:href="@{/proprietarios/novo(tipoPessoa='PF')}"><span class="mega-link-icon" aria-hidden="true">+</span><span><strong>Novo proprietário</strong><small>Cadastro com CPF.</small></span></a><a class="mega-link" th:href="@{/proprietarios(tipoPessoa='PF')}"><span class="mega-link-icon" aria-hidden="true">→</span><span><strong>Consultar pessoas físicas</strong><small>Filtre pelo CPF.</small></span></a></div></div>
+            </details>
+            <details class="mega-item" name="site-mega-menu">
+                <summary class="mega-tab">Empresas <span class="mega-chevron" aria-hidden="true">⌄</span></summary>
+                <div class="mega-panel"><div class="mega-panel-heading"><span class="eyebrow">Empresas</span><strong>Cadastros com CNPJ</strong><p>Aceita CNPJ numérico e alfanumérico.</p></div><div class="mega-links"><a class="mega-link" th:href="@{/proprietarios/novo(tipoPessoa='PJ')}"><span class="mega-link-icon" aria-hidden="true">+</span><span><strong>Nova empresa</strong><small>Cadastro com CNPJ.</small></span></a><a class="mega-link" th:href="@{/proprietarios(tipoPessoa='PJ')}"><span class="mega-link-icon" aria-hidden="true">→</span><span><strong>Consultar empresas</strong><small>Filtre pelo CNPJ.</small></span></a></div></div>
+            </details>
+            <a class="mega-tab" th:href="@{/historico}">Histórico</a><a class="mega-tab" th:href="@{/log-proprietarios}">Logs de proprietários</a>
+        </div>
+    </nav>
+    <script th:src="@{/js/theme.js}" defer></script>
+    <script th:src="@{/js/notificacoes.js}" defer></script>
+</header>
+</body>
+</html>

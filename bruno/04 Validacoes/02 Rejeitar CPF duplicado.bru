@@ -1,0 +1,40 @@
+meta {
+  name: Rejeitar CPF duplicado
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/api/proprietarios
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "cpfCnpj": "{{cpf}}",
+    "nome": "Pessoa Teste Bruno",
+    "rua": "Rua de Teste",
+    "numero": "100",
+    "cep": "60000-000",
+    "cidade": "Fortaleza",
+    "estado": "CE",
+    "complemento": "Sala 1"
+  }
+}
+
+tests {
+  test("Status HTTP 409", function () {
+    expect(res.getStatus()).to.equal(409);
+  });
+  test("Erro no formato da API", function () {
+    const body = res.getBody();
+    expect(body.status).to.equal(res.getStatus());
+    expect(body.mensagem).to.be.a("string").and.not.empty;
+    expect(body.erros).to.be.an("array");
+  });
+}

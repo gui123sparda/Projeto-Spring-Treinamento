@@ -1,0 +1,20 @@
+meta {
+  name: NEG-195 veiculo falhas nao alteraram registro
+  type: http
+  seq: 195
+}
+
+get {
+  url: {{baseUrl}}/api/veiculos/{{erroVeiculoId}}
+  body: none
+  auth: none
+}
+
+tests {
+  test("NEG-195: HTTP 200", function () {
+    expect(res.getStatus()).to.equal(200);
+  });
+  test("Efeito esperado", function () {
+    expect(res.getBody()).to.deep.equal(bru.getVar("erroVeiculoIdOriginal"));
+  });
+}
